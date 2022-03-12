@@ -18,20 +18,32 @@ Project is created with:
 ## How to Create the Setup
 To create this setup exe file the first thing we have to do is convert our program into executable format:
 
-```
-$ cd ../lorem
-$ npm install
-$ npm start
-```
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ## Main Screen
 ![User Profile](images/app-starting-ui.jpeg	)
 <br />
 <br />
 <br />
+<br />
 ## Profile Detailed Info Screen
 ![User Profile](images/user-detail-info.jpeg)
+
+<br />
+<br />
+<br />
+<br />
 ## Edit User Profile Screen
 ![User Profile](images/edit-ui.jpeg)
+
+<br />
+<br />
+<br />
+<br />
 ## Succesfully Updated User  Profile
 ![User Profile](images/updated.jpeg)
