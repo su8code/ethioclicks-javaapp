@@ -2,8 +2,12 @@
 ## 
 ## Table of contents
 * [General info](#general-info)
-* [Technologies Used](#technologies)
-* [How to Setup](#setup)
+* [Technologies we Used](#technologies)
+* [Setup Compilers ](#setup)
+* [About Inno Setup Compiler](#setup)
+* [Other Available Setup Compilers](#setup)
+* [Licence for 3rd party Softwares Used](#setup)
+* [References and Sites Used](#setup)
 
 ## General info
 This project is simple Lorem ipsum dolor generator.
