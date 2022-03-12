@@ -26,24 +26,24 @@ To create this setup exe file the first thing we have to do is convert our progr
 <br />
 
 ## Main Screen
-![User Profile](images/app-starting-ui.jpeg	)
+![User Profile](images/app-starting-ui.jpeg)
 <br />
 <br />
 <br />
 <br />
 ## Profile Detailed Info Screen
-![User Profile](images/user-detail-info.jpeg)
+![Profile Detail](images/user-detail-info.jpeg)
 
 <br />
 <br />
 <br />
 <br />
 ## Edit User Profile Screen
-![User Profile](images/edit-ui.jpeg)
+![Edit Profile](images/edit-ui.jpeg)
 
 <br />
 <br />
 <br />
 <br />
 ## Succesfully Updated User  Profile
-![User Profile](images/updated.jpeg)
+![Updated Profile](images/updated.jpeg)
