@@ -1,7 +1,28 @@
-# ethioclicks java creating exe installer setup program...
-## to install a users profile viewer windows application
+# How to Make exe installer setup program...
+## 
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
 
-# Happy Christmas!
+## General info
+This project is simple Lorem ipsum dolor generator.
+	
+## Technologies
+Project is created with:
+* Lorem version: 12.3
+* Ipsum version: 2.33
+* Ament library version: 999
+	
+## Setup
+To run this project, install it locally using npm:
+
+```
+$ cd ../lorem
+$ npm install
+$ npm start
+```
+
 
 ![User Profile](images/app-starting-ui.jpeg	)
 ![User Profile](images/user-detail-info.jpeg)
