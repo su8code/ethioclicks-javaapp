@@ -10,8 +10,11 @@
 * [References and Sites Used](#setup)
 
 ## General info
-This project is simple to show how installer program is created.
-	
+This project is simple to show how installer program is created. here we used Inno setup compiler program InnoSetup is an open source compiler to create installers on windows. It is free and provides a rich feature set. You can create professional looking installers for the end user. In this article we will explain you the basic concepts and steps involved in creating a simple setup of your C# Project.
+
+### Creating the installer using Inno Setup involves the following two steps:
+* Create Inno Script file
+* Compile the Script file
 ## Technologies
 Project is created with:
 * Mysql Server V5.6  for the Database
