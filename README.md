@@ -10,7 +10,7 @@
 * [References and Sites Used](#setup)
 
 ## General info
-This project is simple Lorem ipsum dolor generator.
+This project is simple to show how installer program is created.
 	
 ## Technologies
 Project is created with:
