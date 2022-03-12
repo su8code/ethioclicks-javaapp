@@ -26,6 +26,9 @@ $ npm start
 
 ## Main Screen
 ![User Profile](images/app-starting-ui.jpeg	)
+<br />
+<br />
+<br />
 ## Profile Detailed Info Screen
 ![User Profile](images/user-detail-info.jpeg)
 ## Edit User Profile Screen
