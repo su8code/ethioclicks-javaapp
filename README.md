@@ -10,11 +10,8 @@
 * [References and Licences of 3rd party Softwares Used](#reference)
 
 ## General info
-This project is simple to show how installer program is created. here we used Inno setup compiler program InnoSetup is an open source compiler to create installers on windows. It is free and provides a rich feature set. You can create professional looking installers for the end user. In this project i will explain you the basic concepts and steps involved in creating a simple setup of any exe file.
+This is a documentation to show how installer program is created for a windows program. in this document we will see how we going to make installer with java program as an exapmle, here there is a simple user profile viewr GUI application which is created using java Programming language our java program and before proceeding to making installer for the jar we have to convert the jar executable java program into an executable program , for making an installer program we used Inno setup compiler InnoSetup is an open source compiler to create installers on windows. It is free and provides a rich feature set. You can create professional looking installers for the end user. In this project i will explain you the basic concepts and steps involved in creating a simple setup of any exe file.
 
-### Creating the installer using Inno Setup involves the following two steps:
-* Create Inno Script file
-* Compile the Script file
 ## Technologies
 Project is created with:
 * Mysql Server V5.6  for the Database
@@ -22,6 +19,11 @@ Project is created with:
 * Inno Setup Compiler
 * Microsoft Visual C++ Distrbution X64
 	
+	
+### Creating the installer using Inno Setup involves the following two steps:
+* Create Inno Script file
+* Compile the Script file
+
 ## Convert jar Program to executable Windows Application
 
 
