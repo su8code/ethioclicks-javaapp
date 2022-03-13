@@ -32,7 +32,7 @@ We Used:
 After successully building our project and exporting the project as jar file There are multiple options available for converting the jar into .exe executable windows application 
 among these methods the popular one is by using the launch4j.exe application 
 
-Launch4j is a cross-platform tool for wrapping Java applications distributed as jars in lightweight Windows native executables. The executable can be configured to search for a certain JRE version or use a bundled one, and it's possible to set runtime options, like the initial/max heap size. The wrapper also provides better user experience through an application icon, a native pre-JRE splash screen, a custom process name, and a Java download page in case the appropriate JRE cannot be found.
+Launch4j is a cross-platform tool for wrapping Java applications distributed as jars in lightweight Windows native executables. The executable can be configured to search for a certain JRE version or use a bundled one(we will use our own bundler jre), and it's possible to set runtime options, like the initial/max heap size. The wrapper also provides better user experience through an application icon, a native pre-JRE splash screen, a custom process name, and a Java download page in case the appropriate JRE cannot be found.
 
 – Launch4j's website
 [Download Launch4j exe Here](http://launch4j.sourceforge.net/)
@@ -42,12 +42,15 @@ even if the steps for Extracting  the jar file vary from one IDE to other IDE in
 
 in this sample java project we have used external database connector library since the jdbc connecor jar file will be stored inside the /lib folder of our project folder since then later when building the exe executable file we will carefully include the class path for the external libraries we have used.
 
-* item [Getting jar on Eclipse](https://www.tutorialspoint.com/eclipse/eclipse_create_jar_files.htm)
+* [Getting jar on Eclipse](https://www.tutorialspoint.com/eclipse/eclipse_create_jar_files.htm)
 * [How to get .jar file in Netbeans](https://www.bing.com/search?q=getting+jar+netbeans&qs=n&form=QBRE&sp=-1&pq=getting+jar+&sc=8-12&sk=&cvid=A5111694CC544D6FA9837318283F016F)
 * [How to get .jar file in Intellij IDEA](https://blog.karthicr.com/posts/2016/07/10/creating-an-executable-jar-in-intellij-idea/)
 
 After Extracting Your Jar File it's better to Copy the jar and the lib folder and move into another folder location our IDE may erase our jar files let's create a new folder and let's name it a 'setup-installer-folder'
-then inside create  another folder called 'bin' 
+then inside create  another folder called 'bin'
+
+![jar output directory structure]<img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="180">
+
 
 ### Creating the installer using Inno Setup involves the following two steps:
 * Create Inno Script file
