@@ -1,4 +1,4 @@
-# How to Make exe installer setup program...
+# How to Make exe installer setup program
 ## 
 ## Table of contents
 * [General Info](#general-info)
