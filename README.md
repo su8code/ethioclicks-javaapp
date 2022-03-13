@@ -3,8 +3,8 @@
 ## Table of contents
 * [General Info](#general-info)
 * [Technologies we Used](#technologies)
-* [making executable from Java Program](#setup)
-* [Setup Compilers ](#setup)
+* [making executable from Java Program](#convert-jar-program-to-executable-windows-application)
+* [making executable from Java Program with 3rd Party jar files](#make-executable-from-java-program-that-includes-external-libraries)
 * [About Inno Setup Compiler](#setup)
 * [Other Available Setup Compilers](#setup)
 * [References and Licences of 3rd party Softwares Used](#reference)
@@ -22,6 +22,9 @@ Project is created with:
 * Inno Setup Compiler
 * Microsoft Visual C++ Distrbution X64
 	
+## Convert jar Program to executable Windows Application
+
+
 ## How to Create the Setup
 To create this setup exe file the first thing we have to do is convert our program into executable format:
 
