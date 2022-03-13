@@ -47,9 +47,9 @@ in this sample java project we have used external database connector library sin
 * [How to get .jar file in Intellij IDEA](https://blog.karthicr.com/posts/2016/07/10/creating-an-executable-jar-in-intellij-idea/)
 
 After Extracting Your Jar File it's better to Copy the jar and the lib folder and move into another folder location our IDE may erase our jar files let's create a new folder and let's name it a 'setup-installer-folder'
-then inside create  another folder called 'bin'
+then inside setup-installer-folder let's create  another folder and name it 'bin' folder then copy all the neccesary files the jar file as well as the lib folder into this newly created bin  folder. 
 
-![jar output directory structure]<img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="180">
+<img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="180">
 
 
 ### Creating the installer using Inno Setup involves the following two steps:
