@@ -46,11 +46,12 @@ in this sample java project we have used external database connector library sin
 * [How to get .jar file in Netbeans](https://www.bing.com/search?q=getting+jar+netbeans&qs=n&form=QBRE&sp=-1&pq=getting+jar+&sc=8-12&sk=&cvid=A5111694CC544D6FA9837318283F016F)
 * [How to get .jar file in Intellij IDEA](https://blog.karthicr.com/posts/2016/07/10/creating-an-executable-jar-in-intellij-idea/)
 
-After Extracting Your Jar File it's better to Copy the jar and the lib folder and move into another folder location our IDE may erase our jar files let's create a new folder and let's name it a 'setup-installer-folder'
-then inside setup-installer-folder let's create  another folder and name it 'bin' folder then copy all the neccesary files the jar file as well as the lib folder into this newly created bin  folder. 
-
 <img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="180">
 
+After Extracting Your Jar File it's better to Copy the jar and the lib folder and move into another folder location our IDE may erase our jar files let's create a new folder and let's name it a 'setup-installer-folder'
+then after creating the folder goto inside the setup-installer-folder and let's add another folder inside create  another folder and name it 'bin' folder. after creating bin folder the next step is to copy our jar and lib folder as well as all the other folders our app have created or our app will need to read configuration data into the newly created 'bin' folder.
+
+then later we will add our own java runtime environment into this folder as wel.  from our already installed JRE program copy the 'bin' and and 'lib' folders
 
 ### Creating the installer using Inno Setup involves the following two steps:
 * Create Inno Script file
