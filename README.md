@@ -1,13 +1,13 @@
 # How to Make exe installer setup program...
 ## 
 ## Table of contents
-* [General info](#general-info)
+* [General Info](#general-info)
 * [Technologies we Used](#technologies)
+* [making executable from Java Program](#setup)
 * [Setup Compilers ](#setup)
 * [About Inno Setup Compiler](#setup)
 * [Other Available Setup Compilers](#setup)
-* [Licence for 3rd party Softwares Used](#setup)
-* [References and Sites Used](#setup)
+* [References and Licences of 3rd party Softwares Used](#reference)
 
 ## General info
 This project is simple to show how installer program is created. here we used Inno setup compiler program InnoSetup is an open source compiler to create installers on windows. It is free and provides a rich feature set. You can create professional looking installers for the end user. In this project i will explain you the basic concepts and steps involved in creating a simple setup of any exe file.
