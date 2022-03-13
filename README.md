@@ -29,9 +29,18 @@ We Used:
 
 ## Convert jar Program to executable Windows Application
 
+After successully building our project and exporting the project as jar file There are multiple options available for converting the jar into .exe executable windows application 
+among these methods the popular one is by using the launch4j.exe application 
+
 Launch4j is a cross-platform tool for wrapping Java applications distributed as jars in lightweight Windows native executables. The executable can be configured to search for a certain JRE version or use a bundled one, and it's possible to set runtime options, like the initial/max heap size. The wrapper also provides better user experience through an application icon, a native pre-JRE splash screen, a custom process name, and a Java download page in case the appropriate JRE cannot be found.
 
 – Launch4j's website
+
+before proceeding to converting jar to exe steps lets see how we created the sample java project 
+in this java project we have used external database connector library therefore we must carefully include the class path for the external libraries we used.
+it will be stored inside the lib folder along our main jar program after we done successfully building our project. to get our jar files 
+
+
 
 ### Creating the installer using Inno Setup involves the following two steps:
 * Create Inno Script file
