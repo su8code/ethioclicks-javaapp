@@ -36,9 +36,11 @@ Launch4j is a cross-platform tool for wrapping Java applications distributed as 
 
 – Launch4j's website
 
-before proceeding to converting jar to exe steps lets see how we created the sample java project 
-in this java project we have used external database connector library therefore we must carefully include the class path for the external libraries we used.
-it will be stored inside the lib folder along our main jar program after we done successfully building our project. to get our jar files 
+before proceeding to step by step process of converting jar to exe let's start from scratch from selecting or creating our new java project by using any java programming IDE of your choice and our mission is finally build and extract our app as a jar executable file. after finishing working on your java project or selecting your target project the steps to get the jar file may vary from IDE to IDE. if you are using Netbeans IDE you just have to click on a build your project button then by selecting your main class from a dialog box then it will automatically create a jar file and will store it into the /dist folder of the project folder.
+
+after successfully building and extracting the jar file the IDE will also store the libraries into the /lib folder alongside your jar file the lib folder that comes together with your jar file inside the /dist folder is the external library you have added inside your application.
+in this sample java project we have used external database connector library since the jdbc connecor jar file will be stored inside the /lib folder since later when building exe using launh4j we must carefully include the class path for the external libraries we have used.
+
 
 
 
