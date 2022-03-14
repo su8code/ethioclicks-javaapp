@@ -61,8 +61,9 @@ After successffully running the project our user interface Looks as follows
 ## The Screen to show Succesfully Updated User Profile
 ![Updated Profile](images/updated.jpeg)
 
+### The First Step is Getting The Jar Files from Java Source Code
 
-After successully configuring and testing the project the next step is to get the jar binary program from the finished final javafx project source code , if you know how to do it yourself it's great and also if you don't know how to do it it's awesome you are going to learn how to do it by yourself with this documentation, The steps used to export the java source code into a jar executable program varies from one IDE to other IDE's because of this we have provided a link down bellow to show in detail and clear way to  get the jar executable file on mostlly used java Integrated Development Environment's ,  but if you are using another type of java IDE kindly search for how you can export the java source code into jar executable binary file for your specific IDE. 
+After successully configuring and testing the project the next step is to get the jar binary file from the finished final javafx project source code , if you know how to do it yourself it's great but if you don't know how to do it it's also awesome you are going to learn how to do it by yourself with this documentation, The steps used to export the java source code into a jar executable program varies from one IDE to other IDE's because of this we have provided a link down bellow to show you in detail and clear way to  get the jar executable file on mostly used java Integrated Development Environment's but if you are using another type of java IDE kindly search for how you can export the java source code into jar executable binary file for your specific IDE. 
 
 
 * [How to get .jar file on Eclipse](https://www.tutorialspoint.com/eclipse/eclipse_create_jar_files.htm)
@@ -74,22 +75,17 @@ even if the steps for Extracting  the jar file vary from one IDE to other IDE in
 After Successfully making your jar file you will get an output like this
 <img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="180">
 
-There are multiple options available for converting the jar into .exe executable windows application 
-among these methods the popular one is by using the launch4j.exe application 
+Since our sample java project includes external database connector library our IDE have created a /lib folder along our jar file
+
+The Next Step is Converting the jar file into exe executable windows application, even if there are so many different options available for converting the jar into .exe executable windows application among these various methods the popular one is by using the launch4j.exe application. 
 
 Launch4j is a cross-platform tool for wrapping Java applications distributed as jars in lightweight Windows native executables. The executable can be configured to search for a certain JRE version or use a bundled one(we will use our own bundled jre), and it's possible to set runtime options, like the initial/max heap size. The wrapper also provides better user experience through an application icon, a native pre-JRE splash screen, a custom process name, and a Java download page in case the appropriate JRE cannot be found.
 
 – Launch4j's website
 [Download Launch4j exe Here](http://launch4j.sourceforge.net/)
-#### First Getting The Jar Files
 
 
-in this sample java project we have used external database connector library since the jdbc connecor jar file will be stored inside the /lib folder of our project folder since then later when building the exe executable file we will carefully include the class path for the external libraries we have used.
-
-
-<img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="180">
-
-after successfullly finishing the above now we will have our jar file and all the neccessary libraries in our hand the next step will be to convert this jar program into an executable program , so please follow the following steps one by one.
+After successfullly finishing the above now we will have our jar file and all the neccessary libraries in our hand the next step will be to convert this jar program into an executable program , so please follow the following steps one by one.
 
 `After Extracting Your Jar File it's better to Copy the jar and the lib folder and move into another folder location our IDE may erase our jar files and we may end up loosing our work.` 
 
@@ -99,6 +95,8 @@ step 3. copy the jar file and the 'lib' into the newly created 'bin' folder
 step 4. copy the 'config' and 'ethioClicksImages' folders and move them into the 'bin' folder ( you can get them on this repository)
 
 After successfully doing all the steps from 1 to step 4 you will have a folder structure like this as show on the picture below
+
+<img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="210">
 
 
 step 5. 
