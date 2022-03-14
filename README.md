@@ -29,10 +29,41 @@ We Used:
 
 ## Convert jar Program to executable Windows Application
 
+For demonstration we have a simple javafx program which includes mysql connector .jar library file and the source code will be attached to this repository inside the project folder or you can select your own java project to proceed into making an executable program from a jar file.
+
+Our Sample Java Project is created using Apache Netbeans IDE 12.6 and it consists of a database connector library jar file the user interface Looks 
+## Main Screen
+![User Profile](images/app-starting-ui.jpeg)
+
+<br />
+<br />
+<br />
+<br />
+
+## Profile Detailed Info Screen
+![Profile Detail](images/user-detail-info.jpeg)
+
+<br />
+<br />
+<br />
+<br />
+
+## Edit User Profile Screen
+![Edit Profile](images/edit-ui.jpeg)
+
+<br />
+<br />
+<br />
+<br />
+
+## Succesfully Updated User  Profile
+![Updated Profile](images/updated.jpeg)
+
+
 After successully building our project and exporting the project as jar file There are multiple options available for converting the jar into .exe executable windows application 
 among these methods the popular one is by using the launch4j.exe application 
 
-Launch4j is a cross-platform tool for wrapping Java applications distributed as jars in lightweight Windows native executables. The executable can be configured to search for a certain JRE version or use a bundled one(we will use our own bundler jre), and it's possible to set runtime options, like the initial/max heap size. The wrapper also provides better user experience through an application icon, a native pre-JRE splash screen, a custom process name, and a Java download page in case the appropriate JRE cannot be found.
+Launch4j is a cross-platform tool for wrapping Java applications distributed as jars in lightweight Windows native executables. The executable can be configured to search for a certain JRE version or use a bundled one(we will use our own bundled jre), and it's possible to set runtime options, like the initial/max heap size. The wrapper also provides better user experience through an application icon, a native pre-JRE splash screen, a custom process name, and a Java download page in case the appropriate JRE cannot be found.
 
 – Launch4j's website
 [Download Launch4j exe Here](http://launch4j.sourceforge.net/)
@@ -66,30 +97,3 @@ To create this setup exe file the first thing we have to do is convert our progr
 <br />
 <br />
 <br />
-
-## Main Screen
-![User Profile](images/app-starting-ui.jpeg)
-
-<br />
-<br />
-<br />
-<br />
-
-## Profile Detailed Info Screen
-![Profile Detail](images/user-detail-info.jpeg)
-
-<br />
-<br />
-<br />
-<br />
-
-## Edit User Profile Screen
-![Edit Profile](images/edit-ui.jpeg)
-
-<br />
-<br />
-<br />
-<br />
-
-## Succesfully Updated User  Profile
-![Updated Profile](images/updated.jpeg)
