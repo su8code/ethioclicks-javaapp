@@ -31,9 +31,9 @@ We Used:
 
 For demonstration we have a simple javafx program and the source code will be attached to this repository inside the project folder. you can clone this repository and open it with your java IDE or you can directly proceed into making an executable program from a jar file by select your own java project.
 
-Our Sample Project which is created using the Apache Netbeans IDE 12.6 is a simple javafx program that will store user profile data and displays each stored user profile data into the display list , it also includes features for adding new user profile and editing already available user profile data as well. the profile data is stored into the locally available mysql server, based on java database connectivity our app directly uses the local mysql server which will be later bundled together with our application. for storing user profile data and it consists of a database connector library jar for enabling the connection between the local database and our app to store and fetch data from the database.
+Our Sample Project which is created using the Apache Netbeans IDE 12.6 is a simple javafx program that will store user profile data and displays each stored user profile data into the display list , it also includes features for adding new user profile and editing already available user profile data as well. the profile data is stored into the locally available mysql server, based on java database connectivity our app directly uses the local mysql server which will be later bundled together with our application. for storing user profile data and it consists of a database connector library jar for enabling the connection between the local database and our app.
 
-after successffully runing the project our user interface Looks as follows
+After successffully running the project our user interface Looks as follows
 ## The Main Screen
 ![User Profile](images/app-starting-ui.jpeg)
 
@@ -62,7 +62,18 @@ after successffully runing the project our user interface Looks as follows
 ![Updated Profile](images/updated.jpeg)
 
 
-After successully building our project and exporting the project as jar file There are multiple options available for converting the jar into .exe executable windows application 
+After successully building our project the next step is to get the jar binary program of our finished application program we have to export the project into a jar executable program, for a step by step process of creating the jar file from our java project  we have a link bellow , you can get detailed steps based on your java IDE 
+
+* [Getting jar on Eclipse](https://www.tutorialspoint.com/eclipse/eclipse_create_jar_files.htm)
+* [How to get .jar file in Netbeans](https://www.bing.com/search?q=getting+jar+netbeans&qs=n&form=QBRE&sp=-1&pq=getting+jar+&sc=8-12&sk=&cvid=A5111694CC544D6FA9837318283F016F)
+* [How to get .jar file in Intellij IDEA](https://blog.karthicr.com/posts/2016/07/10/creating-an-executable-jar-in-intellij-idea/)
+
+even if the steps for Extracting  the jar file vary from one IDE to other IDE in all integrated development environments after successfully building and exporting the project our IDE will create the jar file inside our project folder including the libraries our project is configured to include.
+
+After creating the jar file we will get a
+<img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="180">
+
+There are multiple options available for converting the jar into .exe executable windows application 
 among these methods the popular one is by using the launch4j.exe application 
 
 Launch4j is a cross-platform tool for wrapping Java applications distributed as jars in lightweight Windows native executables. The executable can be configured to search for a certain JRE version or use a bundled one(we will use our own bundled jre), and it's possible to set runtime options, like the initial/max heap size. The wrapper also provides better user experience through an application icon, a native pre-JRE splash screen, a custom process name, and a Java download page in case the appropriate JRE cannot be found.
@@ -71,19 +82,25 @@ Launch4j is a cross-platform tool for wrapping Java applications distributed as 
 [Download Launch4j exe Here](http://launch4j.sourceforge.net/)
 #### First Getting The Jar Files
 
-even if the steps for Extracting  the jar file vary from one IDE to other IDE in all integrated development environments after successfully building and exporting the project our IDE will create the jar file inside our project folder including the libraries our project is configured to include.
 
 in this sample java project we have used external database connector library since the jdbc connecor jar file will be stored inside the /lib folder of our project folder since then later when building the exe executable file we will carefully include the class path for the external libraries we have used.
 
-* [Getting jar on Eclipse](https://www.tutorialspoint.com/eclipse/eclipse_create_jar_files.htm)
-* [How to get .jar file in Netbeans](https://www.bing.com/search?q=getting+jar+netbeans&qs=n&form=QBRE&sp=-1&pq=getting+jar+&sc=8-12&sk=&cvid=A5111694CC544D6FA9837318283F016F)
-* [How to get .jar file in Intellij IDEA](https://blog.karthicr.com/posts/2016/07/10/creating-an-executable-jar-in-intellij-idea/)
 
 <img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="180">
 
-After Extracting Your Jar File it's better to Copy the jar and the lib folder and move into another folder location our IDE may erase our jar files let's create a new folder and let's name it a 'setup-installer-folder'
-then after creating the folder goto inside the setup-installer-folder and let's add another folder inside create  another folder and name it 'bin' folder. after creating bin folder the next step is to copy our jar and lib folder as well as all the other folders our app have created or our app will need to read configuration data into the newly created 'bin' folder.
+after successfullly finishing the above now we will have our jar file and all the neccessary libraries in our hand the next step will be to convert this jar program into an executable program , so please follow the following steps one by one.
 
+`After Extracting Your Jar File it's better to Copy the jar and the lib folder and move into another folder location our IDE may erase our jar files and we may end up loosing our work.` 
+
+step 1. create a new folder under your desktop or other place and name it 'setup-installer-folder'
+step 2. goto inside 'setup-installer-folder' and create another folder and name it 'bin'
+step 3. copy the jar file and the 'lib' into the newly created 'bin' folder
+step 4. copy the 'config' and 'ethioClicksImages' folders and move them into the 'bin' folder ( you can get them on this repository)
+
+After successfully doing all the steps from 1 to step 4 you will have a folder structure like this as show on the picture below
+
+
+step 5. 
 then later we will add our own java runtime environment into this folder as wel.  from our already installed JRE program copy the 'bin' and and 'lib' folders
 
 ### Creating the installer using Inno Setup involves the following two steps:
