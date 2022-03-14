@@ -62,15 +62,16 @@ After successffully running the project our user interface Looks as follows
 ![Updated Profile](images/updated.jpeg)
 
 
-After successully building our project the next step is to get the jar binary program of our finished application program we have to export the project into a jar executable program, for a step by step process of creating the jar file from our java project  we have a link bellow , you can get detailed steps based on your java IDE 
+After successully configuring and testing the project the next step is to get the jar binary program from the finished final javafx project source code , if you know how to do it yourself it's great and also if you don't know how to do it it's awesome you are going to learn how to do it by yourself with this documentation, The steps used to export the java source code into a jar executable program varies from one IDE to other IDE's because of this we have provided a link down bellow to show in detail and clear way to  get the jar executable file on mostlly used java Integrated Development Environment's ,  but if you are using another type of java IDE kindly search for how you can export the java source code into jar executable binary file for your specific IDE. 
 
-* [Getting jar on Eclipse](https://www.tutorialspoint.com/eclipse/eclipse_create_jar_files.htm)
+
+* [How to get .jar file on Eclipse](https://www.tutorialspoint.com/eclipse/eclipse_create_jar_files.htm)
 * [How to get .jar file in Netbeans](https://www.bing.com/search?q=getting+jar+netbeans&qs=n&form=QBRE&sp=-1&pq=getting+jar+&sc=8-12&sk=&cvid=A5111694CC544D6FA9837318283F016F)
 * [How to get .jar file in Intellij IDEA](https://blog.karthicr.com/posts/2016/07/10/creating-an-executable-jar-in-intellij-idea/)
 
-even if the steps for Extracting  the jar file vary from one IDE to other IDE in all integrated development environments after successfully building and exporting the project our IDE will create the jar file inside our project folder including the libraries our project is configured to include.
+even if the steps for Extracting  the jar file vary from one IDE to other IDE in all integrated development environments after successfully building and exporting the project our IDE will create the jar file inside our project folder including the libraries our project is configured to include(external libraries will be stored inside the lib folder along our .jar file).
 
-After creating the jar file we will get a
+After Successfully making your jar file you will get an output like this
 <img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="180">
 
 There are multiple options available for converting the jar into .exe executable windows application 
