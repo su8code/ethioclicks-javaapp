@@ -91,21 +91,25 @@ After successfullly finishing the above now we will have our jar file and all th
 
 #### step 1. Create a new folder under your desktop or other place and name it 'setup-installer-folder'
 #### step 2. Goto inside 'setup-installer-folder' and create another folder and name it 'bin'
-#### step 3. Copy the jar file and the 'lib' into the newly created 'bin' folder
-#### step 4. Copy the 'config' and 'ethioClicksImages' folders and the 'icon.png' image to the 'setup-installer-folder' folder ( you can get them on this repository)
+#### step 3. Then Copy the extracted jar file and the 'lib' folder into the newly created 'bin' folder
+#### step 4. Copy the 'config' and 'ethioClicksImages' folders and the 'icon.png' image from files folder of this repository into your 'setup-installer-folder' folder 
 
-After successfully doing all the steps from 1 to step 4 you will have a folder structure like this as show on the picture below
-
-<img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="210">
-
-
-### Then in the next stels we will add our own java runtime environment.  from our already installed JRE program.
-
-#### step 5. from our Java Runtime Installation copy the 'bin' and and 'lib' folders as shown in the picture bellow
+After successfully doing all the above steps you will have a folder structure like this as show on the picture below
 
 <img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="210">
 
 
+### Then the next step we will be adding our own java runtime environment. we can get the Java runtime from our already installed Java Runtime software Path or if we don't have Java Runtime already installed we need to download the java JRE runtime from the oracle official website. <br />
+Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://www.java.com/en/download/)
+
+#### step 5. First create jre folder inside the 'setup-installer-folder/bin'  folder
+<img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="210">
+
+#### step 6.  Then goto inside the java runtime installation folder and copy the 'bin' and and 'lib' folders as shown in the picture below paste into the newly created jre folder. 
+
+<img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="210">
+
+### The Next Step will be to start Lanch4j app and directly start the process of converting jar into exe
 
 
 ### Creating the installer using Inno Setup involves the following two steps:
@@ -118,6 +122,4 @@ To create this setup exe file the first thing we have to do is convert our progr
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
+
