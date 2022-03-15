@@ -140,13 +140,13 @@ Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://ww
 
 #### step 9. Goto 'ClassPath' Tab and do the followings based on the numbers you see on the screen
 
-![Class path ](images/launch4j/classpath-tab.jpg)
+![Class path ](images/launch4j/classpath-tab.JPG)
 
  * first tick the 'Custom Classpath' after clicking the checkbox it will activate the view bellow the checkbox (#1)
  * then down below the checkbox on '*Main Class' column tap on the button indicated with the number 2  and select the jar file once again
  * after selecting the jar file located inside the bin folder lanch4j app will populate and fill the input boxes automatically but on our scenario we have to edit and make them suitable for our specific project so let's click on the database connecter jar file you see and click the Edit Item.
  * inside Edit item add 'bin/' before the path to database connecter library as shown in the picture above and finally tap on accept button the next sreen you will see musct look like this 
- ![class path success](images/launch4j/classpath-tab2.jpg)
+ ![class path success](images/launch4j/classpath-tab2.JPG)
 
 #### step 10.
 
