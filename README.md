@@ -43,7 +43,7 @@ After successffully running the project our user interface Looks as follows
 
 
 #### Show All User Profile Screen
-![Edit Profile](images/profiles-list.jpg)
+![Edit Profile](images/profiles-list.JPG)
 
 <br />
 <br />
@@ -55,7 +55,7 @@ After successffully running the project our user interface Looks as follows
 <br />
 
 #### Add New Profile Screen
-![Profile Detail](images/Add-New.JPG)
+![Add New](images/Add-New.JPG)
 
 <br />
 <br />
@@ -86,9 +86,9 @@ After successully configuring and testing the project the next step is to get th
 even if the steps for Extracting  the jar file vary from one IDE to other IDE in all integrated development environments after successfully building and exporting the project our IDE will create the jar file inside our project folder including the libraries our project is configured to include(external libraries will be stored inside the lib folder along our .jar file).
 
 After Successfully making your jar file you will get an output like this
-<img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="180">
+![Edit Profile](images/jar.JPG)
 
-Since our sample java project includes external database connector library our IDE have created a /lib folder along our jar file
+Since our sample java project includes external database connector library our IDE have created a 'lib; folder along our jar file
 
 The Next Step is Converting the jar file into exe executable windows application, even if there are so many different options available for converting the jar into .exe executable windows application among these various methods the popular one is by using the launch4j.exe application. 
 
@@ -101,6 +101,7 @@ Launch4j is a cross-platform tool for wrapping Java applications distributed as 
 After successfullly finishing the above now we will have our jar file and all the neccessary libraries in our hand the next step will be to convert this jar program into an executable program , so please follow the following steps one by one.
 
 `After Extracting Your Jar File it's better to Copy the jar and the lib folder and move into another folder location our IDE may erase our jar files and we may end up loosing our work.` 
+Let's set our Folder Structure suitable for creating the executable as well as well organized for making the setup later on.
 
 #### step 1. Create a new folder under your desktop or other place and name it 'setup-installer-folder'
 #### step 2. Goto inside 'setup-installer-folder' and create another folder and name it 'bin'
@@ -109,32 +110,51 @@ After successfullly finishing the above now we will have our jar file and all th
 
 After successfully doing all the above steps you will have a folder structure like this as show on the picture below
 
-<img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="210">
-
+![Edit Profile](images/setup-installer-strctr.JPG)
 
 ### Then the next step we will be adding our own java runtime environment. we can get the Java runtime from our already installed Java Runtime software Path or if we don't have Java Runtime already installed we need to download the java JRE runtime from the oracle official website. <br />
 Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://www.java.com/en/download/)
 
 #### step 5. First create jre folder inside the 'setup-installer-folder/bin'  folder
-<img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="210">
+
+![Create JRE folder](images/bin-with-jre.JPG)
 
 #### step 6.  Then goto inside the java runtime installation folder and copy the 'bin' and and 'lib' folders as shown in the picture below paste it into the newly created jre folder inside the 'setup-installer-folder/bin/jre'. 
 
-<img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="210">
+![Create JRE folder](images/program-files-folder-jre.JPG)
 
 ### The Next Step will be to start Lanch4j app and directly start the process of converting jar into exe
 
 #### step 7. open  the launch4j application ( if you haven't yet downloaded the app the download link is available above ) since i'm using the Lanch4j v3.8 the first sreen will get will look like this for launch4j v3.8
 
-#### step 8.  Goto 'Basic' tab and specify 3 things
+![Create JRE folder](images/home.jpg)
 
-* the output File name and the directory you want it to be stored ( here the exe output should be inside setup-installer-folder as shown in the picture)
-* the jar executable file we had it inside the bin folder 
-* and thirdly the icon you want to use for the exe program(it's optional).
+
+#### step 8.  Goto 'Basic' Tab and specify 3 things
+
+![Create JRE folder](images/basic-tab.jpg)
+
+* set the output File name and the directory you want it to be stored ( here the exe output should be inside setup-installer-folder as shown in the picture) (#1)
+* the jar executable file we had it inside the bin folder (#2)
+* and thirdly the icon you want to use for the exe program(it's optional).(#3)
+
+#### step 7. Goto 'ClassPath' Tab and do the followings based on the numbers you see on the screen
+
+ * first tick the 'Custom Classpath' it will activate the view bellow the checkbox (#1)
+ * then down below the checkbox on '*Main Class' column tap on the button indicated with the number 2  and select the jar file once again
+ * after selecting the jar file located inside the bin folder lanch4j app will populate and fill the input boxes automatically but we need to edit them click on the database connecter jar file you see .
+ * 
+
+![Create JRE folder](images/basic-tab.jpg)
 
 #### step 7.
+
+![Create JRE folder](images/basic-tab.jpg)
+
 #### step 7.
-#### step 7.
+
+![Create JRE folder](images/basic-tab.jpg)
+
 
 ### Creating the installer using Inno Setup involves the following two steps:
 * Create Inno Script file
