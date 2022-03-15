@@ -161,25 +161,58 @@ but we want the executable program to use our own bundled java runtime. fortunat
 Inno Setup is a free installer for Windows programs. First introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability.
 Inno Setup supports all Windows versions and allows you to create an EXE file that contains all of your application's files, which will be displayed in an interface with a great design. This will help you create the perfectly customized installation process.
 
-Installations are created by means of scripts, which are ASCII text files with a format somewhat similar to .INI files. (No, it's not as complicated as you might be thinking!). Unicode Inno Setup also supports UTF-8 encoded text files.
+Installations are created by means of scripts, which are ASCII text files with a format somewhat similar to .INI files. (No, it's not as complicated as you might be thinking!). Unicode Inno Setup also supports UTF-8 encoded text files. <br />
 
-Scripts have an ".iss" (meaning Inno Setup Script) extension. The script controls every aspect of the installation. It specifies which files are to be installed and where, what shortcuts are to be created and what they are to be named, and so on.
+Scripts have an ".iss" (meaning Inno Setup Script) extension. The script controls every aspect of the installation. It specifies which files are to be installed and where, what shortcuts are to be created and what they are to be named, and so on. <br />
 
 InnoSetup script file is a simple text file which is similar to .INI files with the extension .ISS. In this script file the contents are arranged in sections. These scripts are easy to understand and uses a simple syntax. The section starts with the Section Name which is enclosed in square brackets. Each section handles a specific function of the installation.
 
 ![Inno_Setup_screenshot](https://user-images.githubusercontent.com/88676535/158381524-da8cec50-b41c-4ebc-9dea-c62789c6d03f.png)
 
-Setup: This section consists of settings and application related information like application name, publisher name etc.
-Languages: List of languages supported.
-Tasks: Tasks to be performed by the setup during the installation.
-Files: Files to be copied to the User's system.
-Icons: The Application shortcuts: Start menu folders, etc. are defined here.
-Run: Any executable to be executed after the installation is completed.
+Setup: This section consists of settings and application related information like application name, publisher name etc. <br />
+Languages: List of languages supported.   <br />
+Tasks: Tasks to be performed by the setup during the installation. <br />
+Files: Files to be copied to the User's system.  <br />
+Icons: The Application shortcuts: Start menu folders, etc. are defined here. <br />
+Run: Any executable to be executed after the installation is completed. <br />
 
 
-Script files are usually edited from inside the Setup Compiler program. After you have finishing writing the script, the next and final step is select "Compile" in the Setup Compiler. What this does is create a complete, ready-to-run Setup program based on your script. By default, this is created in a directory named "Output" under the directory containing the script.
-
+Script files are usually edited from inside the Setup Compiler program. After you have finishing writing the script, the next and final step is select "Compile" in the Setup Compiler. What this does is create a complete, ready-to-run Setup program based on your script. By default, this is created in a directory named "Output" under the directory containing the script.  <br />
+ 
 To give you an idea of how this all works, start the Setup Compiler, click File | Open, and select one of the script files in the Examples subdirectory located under the Inno Setup directory. (It may be helpful to use the sample scripts as a template for your own scripts.)
+
+## Script Format Overview
+Inno Setup Scripts are arranged into sections. Each section controls a different aspect of the installation. A section is started by specifying the name of the section enclosed in square brackets []. Inside each section is any number of entries.
+
+There are two different main types of sections: those such as [Setup] whose entries contain directive names and values (in the form Directive=Value), and those such as [Files] whose entries are divided into parameters.
+
+Here is an example:
+
+[Setup]
+AppName=My Program
+
+[Files]
+Source: "MYPROG.EXE"; DestDir: "{app}"
+Note that it is legal to specify multiple sections of the same name.
+
+You can put "comments" in the script (which are ignored by the compiler) by placing a semicolon at the beginning of a line. For example:
+
+; This is a comment. I could put reminders to myself here...
+A C-like #include directive is supported, which pulls in lines from a separate file into the script at the position of the #include directive. The syntax is:
+
+#include "filename.txt"
+If the filename is not fully qualified, the compiler will look for it in the same directory as the file containing the #include directive. The filename may be prefixed by "compiler:", in which case it looks for the file in the Compiler directory.
+
+A #preproc directive is supported, which specifies whether to use the built-in preprocessor which only supports the above #include directive or to use Inno Setup Preprocessor (ISPP) which supports many more directives. The syntax is:
+
+#preproc builtin
+#preproc ispp
+By default, scripts use ISPP if available, and .isl files use the built-in preprocessor.
+
+## Creating Our Setup
+First Download Inno Setup Compiler Program
+Download link:
+[Inno Download Link]()
 
 
 ### Creating the installer using Inno Setup involves the following two steps:
@@ -197,3 +230,6 @@ To create this setup exe file the first thing we have to do is convert our progr
 <br />
 <br />
 <br />
+
+
+[Inno Documentation](https://documentation.help/Inno-Setup/)
