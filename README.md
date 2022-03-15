@@ -1,4 +1,6 @@
-# How to Make exe installer setup program
+# setup
+
+# Documentation to Make exe installer setup program
 ## 
 ## Table of contents
 * [General Info](#general-info)
@@ -17,9 +19,9 @@ This is a documentation to show how installer program is created for a java prog
 Tools and Programs  Used 
 We Used:
 * Mysql Server V5.6  
-     for the Database to store each users profile data
+     for our sample java project the Database to store each users profile data
 * Launch4j 
-     used to Create windows native Executable .exe from our jar executable 
+     used to Create windows native Executable .exe from our sample java jar executable 
 * Inno Setup Compiler
      to pack our application exe our icons configuration files as well as all the folders into a single setup program
 * Microsoft Visual C++ Distrbution X64 
