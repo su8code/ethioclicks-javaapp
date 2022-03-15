@@ -39,27 +39,40 @@ After successffully running the project our user interface Looks as follows
 
 <br />
 <br />
+
+
+
+#### Show All User Profile Screen
+![Edit Profile](images/profiles-list.jpg)
+
 <br />
 <br />
 
-#### Profile Detailed Info Screen
-![Profile Detail](images/user-detail-info.jpeg)
+#### Detailed Profile Info Screen
+![Profile Detail](images/profile-detail.jpg)
 
 <br />
 <br />
+
+#### Add New Profile Screen
+![Profile Detail](images/Add-New.jpg)
+
 <br />
 <br />
+
 
 #### The Edit User Profile Screen
-![Edit Profile](images/edit-ui.jpeg)
+![Edit Profile](images/edit-profile.jpg)
 
 <br />
 <br />
-<br />
-<br />
+
 
 #### The Screen to show Succesfully Updated User Profile
-![Updated Profile](images/updated.jpeg)
+![Updated Profile](images/edit-success.jpg)
+
+<br />
+<br />
 
 ##### The First Step is Getting The Jar Files from Java Source Code
 
