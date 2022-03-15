@@ -169,12 +169,12 @@ InnoSetup script file is a simple text file which is similar to .INI files with 
 
 ![Inno_Setup_screenshot](https://user-images.githubusercontent.com/88676535/158381524-da8cec50-b41c-4ebc-9dea-c62789c6d03f.png)
 
-Setup: This section consists of settings and application related information like application name, publisher name etc. <br />
-Languages: List of languages supported.   <br />
-Tasks: Tasks to be performed by the setup during the installation. <br />
-Files: Files to be copied to the User's system.  <br />
-Icons: The Application shortcuts: Start menu folders, etc. are defined here. <br />
-Run: Any executable to be executed after the installation is completed. <br />
+`Setup:` This section consists of settings and application related information like application name, publisher name etc. <br />
+`Languages:` List of languages supported.   <br />
+`Tasks:` Tasks to be performed by the setup during the installation. <br />
+`Files:` Files to be copied to the User's system.  <br />
+`Icons:` The Application shortcuts: Start menu folders, etc. are defined here. <br />
+`Run:`  Any executable to be executed after the installation is completed. <br />
 
 
 Script files are usually edited from inside the Setup Compiler program. After you have finishing writing the script, the next and final step is select "Compile" in the Setup Compiler. What this does is create a complete, ready-to-run Setup program based on your script. By default, this is created in a directory named "Output" under the directory containing the script.  <br />
@@ -187,27 +187,31 @@ Inno Setup Scripts are arranged into sections. Each section controls a different
 There are two different main types of sections: those such as [Setup] whose entries contain directive names and values (in the form Directive=Value), and those such as [Files] whose entries are divided into parameters.
 
 Here is an example:
-
+`
 [Setup]
 AppName=My Program
 
+
 [Files]
-Source: "MYPROG.EXE"; DestDir: "{app}"
+Source: "MYPROG.EXE"; DestDir: "{app}" `
 Note that it is legal to specify multiple sections of the same name.
 
 You can put "comments" in the script (which are ignored by the compiler) by placing a semicolon at the beginning of a line. For example:
 
-; This is a comment. I could put reminders to myself here...
+`; This is a comment. I could put reminders to myself here...`
 A C-like #include directive is supported, which pulls in lines from a separate file into the script at the position of the #include directive. The syntax is:
 
-#include "filename.txt"
+`#include "filename.txt"`
 If the filename is not fully qualified, the compiler will look for it in the same directory as the file containing the #include directive. The filename may be prefixed by "compiler:", in which case it looks for the file in the Compiler directory.
 
 A #preproc directive is supported, which specifies whether to use the built-in preprocessor which only supports the above #include directive or to use Inno Setup Preprocessor (ISPP) which supports many more directives. The syntax is:
 
+`
 #preproc builtin
 #preproc ispp
 By default, scripts use ISPP if available, and .isl files use the built-in preprocessor.
+`
+
 
 ## Creating Our Setup
 First Download Inno Setup Compiler Program
