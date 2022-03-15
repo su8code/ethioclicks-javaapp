@@ -156,6 +156,7 @@ but we want the executable program to use our own bundled java runtime. fortunat
 #### step 11. Finally launch4j will successfully build our exe file and store it on the output path with a name we have previously specified 
 ![Create JRE folder](images/launch4j/successfull.JPG)
 
+## About Inno Setup Compiler 
 
 ### Creating the installer using Inno Setup involves the following two steps:
 * Create Inno Script file
