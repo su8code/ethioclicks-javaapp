@@ -1,5 +1,3 @@
-# setup
-
 # Documentation to Make exe installer setup program
 ## 
 ## Table of contents
