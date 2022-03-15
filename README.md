@@ -145,10 +145,10 @@ Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://ww
  * first tick the 'Custom Classpath' after clicking the checkbox it will activate the view bellow the checkbox (#1)
  * then down below the checkbox on '*Main Class' column tap on the button indicated with the number 2  and select the jar file once again
  * after selecting the jar file located inside the bin folder lanch4j app will populate and fill the input boxes automatically but on our scenario we have to edit and make them suitable for our specific project so let's click on the database connecter jar file you see and click the Edit Item.
- * inside Edit item add 'bin/' before the path to database connecter library as shown in the picture above and finally tap on accept button the next sreen you will see musct look like this 
+ * inside Edit item add 'bin/' before the path to database connecter library as shown in the picture above and finally tap on accept button the next sreen you will see look as follows  <br /> 
  ![class path success](images/launch4j/classpath-tab2.JPG)
 
-#### step 10.
+#### step 10.Done we have successfully configured the basic setting for the launch4j app to create our exe windows application from java jar but we want the executable program to use our own bundled java runtime. fortunately launch4j program allows us to choose which jre to use for our app during program execution
 
 ![Create JRE folder](images/launch4j/basic-tab.jpg)
 
@@ -167,4 +167,3 @@ To create this setup exe file the first thing we have to do is convert our progr
 <br />
 <br />
 <br />
-
