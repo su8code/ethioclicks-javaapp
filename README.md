@@ -49,27 +49,27 @@ After successffully running the project our user interface Looks as follows
 <br />
 
 #### Detailed Profile Info Screen
-![Profile Detail](images/profile-detail.jpg)
+![Profile Detail](images/profile-detail.JPG)
 
 <br />
 <br />
 
 #### Add New Profile Screen
-![Profile Detail](images/Add-New.jpg)
+![Profile Detail](images/Add-New.JPG)
 
 <br />
 <br />
 
 
 #### The Edit User Profile Screen
-![Edit Profile](images/edit-profile.jpg)
+![Edit Profile](images/edit-profile.JPG)
 
 <br />
 <br />
 
 
 #### The Screen to show Succesfully Updated User Profile
-![Updated Profile](images/edit-success.jpg)
+![Updated Profile](images/edit-success.JPG)
 
 <br />
 <br />
