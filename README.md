@@ -99,8 +99,7 @@ Launch4j is a cross-platform tool for wrapping Java applications distributed as 
 
 
 After successfullly finishing the above now we will have our jar file and all the neccessary libraries in our hand the next step will be to convert this jar program into an executable program , so please follow the following steps one by one.
-
-`After Extracting Your Jar File it's better to Copy the jar and the lib folder and move into another folder location our IDE may erase our jar files and we may end up loosing our work.` 
+ 
 Let's set our Folder Structure suitable for creating the executable as well as well organized for making the setup later on.
 
 #### step 1. Create a new folder under your desktop or other place and name it 'setup-installer-folder'
@@ -112,14 +111,14 @@ After successfully doing all the above steps you will have a folder structure li
 
 ![Edit Profile](images/setup-installer-strctr.JPG)
 
-### Then the next step we will be adding our own java runtime environment. we can get the Java runtime from our already installed Java Runtime software Path or if we don't have Java Runtime already installed we need to download the java JRE runtime from the oracle official website. <br />
+#### Then the next step will be adding our own java runtime environment. we can get the Java runtime from our already installed Java Runtime software Path or if we don't have Java Runtime already installed we need to download the java JRE runtime from the oracle official website. <br />
 Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://www.java.com/en/download/)
 
 #### step 5. First create jre folder inside the 'setup-installer-folder/bin'  folder
 
 ![Create JRE folder](images/bin-with-jre.JPG)
 
-#### step 6.  Then goto inside the java runtime installation folder and copy the 'bin' and and 'lib' folders as shown in the picture below paste it into the newly created jre folder inside the 'setup-installer-folder/bin/jre'. 
+#### step 6.  Goto inside the java runtime installation folder and copy the 'bin' and and 'lib' folders as shown in the picture below and paste them into the newly created jre folder inside the 'setup-installer-folder/bin/jre'. 
 
 ![Create JRE folder](images/program-files-folder-jre.JPG)
 
@@ -127,12 +126,12 @@ Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://ww
 
 #### step 7. open  the launch4j application ( if you haven't yet downloaded the app the download link is available above ) since i'm using the Lanch4j v3.8 the first sreen will get will look like this for launch4j v3.8
 
-![Create JRE folder](images/home.jpg)
+![Create JRE folder](images/launch4j/home.jpg)
 
 
 #### step 8.  Goto 'Basic' Tab and specify 3 things
 
-![Create JRE folder](images/basic-tab.jpg)
+![Create JRE folder](images/launch4j/basic-tab.jpg)
 
 * set the output File name and the directory you want it to be stored ( here the exe output should be inside setup-installer-folder as shown in the picture) (#1)
 * the jar executable file we had it inside the bin folder (#2)
@@ -142,10 +141,10 @@ Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://ww
 
  * first tick the 'Custom Classpath' it will activate the view bellow the checkbox (#1)
  * then down below the checkbox on '*Main Class' column tap on the button indicated with the number 2  and select the jar file once again
- * after selecting the jar file located inside the bin folder lanch4j app will populate and fill the input boxes automatically but we need to edit them click on the database connecter jar file you see .
+ * after selecting the jar file located inside the bin folder lanch4j app will populate and fill the input boxes automatically but on our scenario we have to edit and make them suitable for our specific project so let's click on the database connecter jar file you see and click on Edit Item.
  * 
 
-![Create JRE folder](images/basic-tab.jpg)
+![Create JRE folder](images/launch4j/basic-tab.jpg)
 
 #### step 7.
 
