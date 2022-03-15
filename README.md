@@ -148,14 +148,13 @@ Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://ww
  * inside Edit item add 'bin/' before the path to database connecter library as shown in the picture above and finally tap on accept button the next sreen you will see look as follows  <br /> 
  ![class path success](images/launch4j/classpath-tab2.JPG)
 
-#### step 10.Done we have successfully configured the basic setting for the launch4j app to create our exe windows application 
+#### step 10. Done we have successfully configured the basic setting for the launch4j app to create our exe windows application 
 
-but we want the executable program to use our own bundled java runtime. fortunately launch4j program allows us to specify which jre to use for our app during program execution the. to apply these settings goto 'jre' tab in launch4j app and type the path to our jre in the provided input box as shown in the picture below then finally start the process of creating exe by clicking the icon button you see pointed by the arrow labeled 2
-![Create JRE folder](images/launch4j/launch4j/run.JPG)
+but we want the executable program to use our own bundled java runtime. fortunately launch4j program allows us to specify which jre to use for our app during program execution. to apply these settings we have to set some values inside the jre tab goto 'jre' tab in launch4j app and type the path to our jre in the provided input box as shown in the picture bellow then finally start the process of creating exe by clicking the icon button you see pointed by the arrow labeled 2
+![Create JRE folder](images/launch4j/run.JPG)
 
-#### step 11.finally launch4j will successfully build our exe file and store on the output path with a name we have previously specified 
-
-![Create JRE folder](images/basic-tab.jpg)
+#### step 11. Finally launch4j will successfully build our exe file and store it on the output path with a name we have previously specified 
+![Create JRE folder](images/launch4j/successfull.JPG)
 
 
 ### Creating the installer using Inno Setup involves the following two steps:
