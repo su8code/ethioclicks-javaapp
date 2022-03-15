@@ -161,7 +161,7 @@ but we want the executable program to use our own bundled java runtime. fortunat
 Inno Setup is a free installer for Windows programs. First introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability.
 Inno Setup supports all Windows versions and allows you to create an EXE file that contains all of your application's files, which will be displayed in an interface with a great design. This will help you create the perfectly customized installation process.
 
-Installations are created by means of scripts, which are ASCII text files with a format somewhat similar to .INI files. (No, it's not as complicated as you might be thinking!). Unicode Inno Setup also supports UTF-8 encoded text files. <br />
+Installations are created by means of scripts, which are ASCII text files with a format somewhat similar to .INI files. (No, it's not as complicated as you might be thinking! there is GUI interface that helps you create the script authomatically and we will modify it based on our specific requirement and our neeed). Unicode Inno Setup also supports UTF-8 encoded text files. <br />
 
 Scripts have an ".iss" (meaning Inno Setup Script) extension. The script controls every aspect of the installation. It specifies which files are to be installed and where, what shortcuts are to be created and what they are to be named, and so on. <br />
 
@@ -216,13 +216,16 @@ By default, scripts use ISPP if available, and .isl files use the built-in prepr
 ## Creating Our Setup
 First Download Inno Setup Compiler Program
 Download link:
-[Inno Download Link]()
+[Inno Download Link](https://jrsoftware.org/isdl.php)
 
+download and Install the inno setup compiler appllication 
 
 ### Creating the installer using Inno Setup involves the following two steps:
 * Create Inno Script file
 * Compile the Script file
 
+### Creating Script File is Straight forward and simple 
+open up Inno Setup Compiler and click create a new script file using the script wizard and it will directly olen GUI interface and the application will finally generate the script file for you.
 
 ![image](https://user-images.githubusercontent.com/88676535/158379580-6ff46363-e8c2-4fa4-8dbd-dde65d5f5b10.png)
 ![mysql-server](https://user-images.githubusercontent.com/88676535/158379796-9d118191-05e4-48e8-b383-22f5ee2cee27.JPG)
