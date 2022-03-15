@@ -34,7 +34,7 @@ For demonstration we have a simple javafx program and the source code will be at
 Our Sample Project which is created using the Apache Netbeans IDE 12.6 is a simple javafx program that will store user profile data and displays each stored user profile data into the display list , it also includes features for adding new user profile and editing already available user profile data as well. the profile data is stored into the locally available mysql server, based on java database connectivity our app directly uses the local mysql server which will be later bundled together with our application. for storing user profile data and it consists of a database connector library jar for enabling the connection between the local database and our app.
 
 After successffully running the project our user interface Looks as follows
-## The Main Screen
+#### The Main Screen
 ![User Profile](images/app-starting-ui.jpeg)
 
 <br />
@@ -42,7 +42,7 @@ After successffully running the project our user interface Looks as follows
 <br />
 <br />
 
-## Profile Detailed Info Screen
+#### Profile Detailed Info Screen
 ![Profile Detail](images/user-detail-info.jpeg)
 
 <br />
@@ -50,7 +50,7 @@ After successffully running the project our user interface Looks as follows
 <br />
 <br />
 
-## The Edit User Profile Screen
+#### The Edit User Profile Screen
 ![Edit Profile](images/edit-ui.jpeg)
 
 <br />
@@ -58,10 +58,10 @@ After successffully running the project our user interface Looks as follows
 <br />
 <br />
 
-## The Screen to show Succesfully Updated User Profile
+#### The Screen to show Succesfully Updated User Profile
 ![Updated Profile](images/updated.jpeg)
 
-### The First Step is Getting The Jar Files from Java Source Code
+##### The First Step is Getting The Jar Files from Java Source Code
 
 After successully configuring and testing the project the next step is to get the jar binary file from the finished final javafx project source code , if you know how to do it yourself it's great but if you don't know how to do it it's also awesome you are going to learn how to do it by yourself with this documentation, The steps used to export the java source code into a jar executable program varies from one IDE to other IDE's because of this we have provided a link down bellow to show you in detail and clear way to  get the jar executable file on mostly used java Integrated Development Environment's but if you are using another type of java IDE kindly search for how you can export the java source code into jar executable binary file for your specific IDE. 
 
@@ -89,18 +89,24 @@ After successfullly finishing the above now we will have our jar file and all th
 
 `After Extracting Your Jar File it's better to Copy the jar and the lib folder and move into another folder location our IDE may erase our jar files and we may end up loosing our work.` 
 
-step 1. create a new folder under your desktop or other place and name it 'setup-installer-folder'
-step 2. goto inside 'setup-installer-folder' and create another folder and name it 'bin'
-step 3. copy the jar file and the 'lib' into the newly created 'bin' folder
-step 4. copy the 'config' and 'ethioClicksImages' folders and move them into the 'bin' folder ( you can get them on this repository)
+#### step 1. Create a new folder under your desktop or other place and name it 'setup-installer-folder'
+#### step 2. Goto inside 'setup-installer-folder' and create another folder and name it 'bin'
+#### step 3. Copy the jar file and the 'lib' into the newly created 'bin' folder
+#### step 4. Copy the 'config' and 'ethioClicksImages' folders and the 'icon.png' image to the 'setup-installer-folder' folder ( you can get them on this repository)
 
 After successfully doing all the steps from 1 to step 4 you will have a folder structure like this as show on the picture below
 
 <img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="210">
 
 
-step 5. 
-then later we will add our own java runtime environment into this folder as wel.  from our already installed JRE program copy the 'bin' and and 'lib' folders
+### Then in the next stels we will add our own java runtime environment.  from our already installed JRE program.
+
+#### step 5. from our Java Runtime Installation copy the 'bin' and and 'lib' folders as shown in the picture bellow
+
+<img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="210">
+
+
+
 
 ### Creating the installer using Inno Setup involves the following two steps:
 * Create Inno Script file
