@@ -111,7 +111,8 @@ After successfully doing all the above steps you will have a folder structure li
 
 ![Edit Profile](images/setup-installer-strctr.JPG)
 
-#### Then the next step will be adding our own java runtime environment. we can get the Java runtime from our already installed Java Runtime software Path or if we don't have Java Runtime already installed we need to download the java JRE runtime from the oracle official website. <br />
+#### Then next we will add our own java runtime environment.
+we can get the Java runtime from our already installed Java Runtime software Path or if we don't have Java Runtime already installed we need to download the java JRE runtime from the oracle official website. <br />
 Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://www.java.com/en/download/)
 
 #### step 5. First create jre folder inside the 'setup-installer-folder/bin'  folder
@@ -122,7 +123,7 @@ Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://ww
 
 ![Create JRE folder](images/program-files-folder-jre.JPG)
 
-### The Next Step will be to start Lanch4j app and directly start the process of converting jar into exe
+### Next start Lanch4j app and directly start the process of converting jar into exe
 
 #### step 7. open  the launch4j application ( if you haven't yet downloaded the app the download link is available above ) since i'm using the Lanch4j v3.8 the first sreen will get will look like this for launch4j v3.8
 
@@ -139,12 +140,12 @@ Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://ww
 
 #### step 7. Goto 'ClassPath' Tab and do the followings based on the numbers you see on the screen
 
+![Create JRE folder](images/launch4j/basic-tab.jpg)
+
  * first tick the 'Custom Classpath' it will activate the view bellow the checkbox (#1)
  * then down below the checkbox on '*Main Class' column tap on the button indicated with the number 2  and select the jar file once again
  * after selecting the jar file located inside the bin folder lanch4j app will populate and fill the input boxes automatically but on our scenario we have to edit and make them suitable for our specific project so let's click on the database connecter jar file you see and click on Edit Item.
- * 
-
-![Create JRE folder](images/launch4j/basic-tab.jpg)
+ * then inside Edite item add 'bin/' before the path to database connecter library as shown in the picture and click accept
 
 #### step 7.
 
