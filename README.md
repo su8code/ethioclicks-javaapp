@@ -1,4 +1,4 @@
-# Documentation to Make exe installer setup program
+# Documentation to make exe installer Setup program
 ## 
 ## Table of contents
 * [General Info](#general-info)
@@ -105,12 +105,23 @@ Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://ww
 #### step 5. First create jre folder inside the 'setup-installer-folder/bin'  folder
 <img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="210">
 
-#### step 6.  Then goto inside the java runtime installation folder and copy the 'bin' and and 'lib' folders as shown in the picture below paste into the newly created jre folder. 
+#### step 6.  Then goto inside the java runtime installation folder and copy the 'bin' and and 'lib' folders as shown in the picture below paste it into the newly created jre folder inside the 'setup-installer-folder/bin/jre'. 
 
 <img src="https://raw.githubusercontent.com/su8code/ethioclicks-javaapp/main/images/jar-output.JPG" width="400" height="210">
 
 ### The Next Step will be to start Lanch4j app and directly start the process of converting jar into exe
 
+#### step 7. open  the launch4j application ( if you haven't yet downloaded the app the download link is available above ) since i'm using the Lanch4j v3.8 the first sreen will get will look like this for launch4j v3.8
+
+#### step 8.  Goto 'Basic' tab and specify 3 things
+
+*the output File name and the directory you want it to be stored ( here the exe output should be inside setup-installer-folder as shown in the picture)
+*the jar executable file we had it inside the bin folder 
+* and thirdly the icon you want to use for the exe program(it's optional).
+
+#### step 7.
+#### step 7.
+#### step 7.
 
 ### Creating the installer using Inno Setup involves the following two steps:
 * Create Inno Script file
