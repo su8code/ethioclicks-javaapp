@@ -158,9 +158,38 @@ but we want the executable program to use our own bundled java runtime. fortunat
 
 ## About Inno Setup Compiler 
 
+Inno Setup is a free installer for Windows programs. First introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability.
+Inno Setup supports all Windows versions and allows you to create an EXE file that contains all of your application's files, which will be displayed in an interface with a great design. This will help you create the perfectly customized installation process.
+
+Installations are created by means of scripts, which are ASCII text files with a format somewhat similar to .INI files. (No, it's not as complicated as you might be thinking!). Unicode Inno Setup also supports UTF-8 encoded text files.
+
+Scripts have an ".iss" (meaning Inno Setup Script) extension. The script controls every aspect of the installation. It specifies which files are to be installed and where, what shortcuts are to be created and what they are to be named, and so on.
+
+InnoSetup script file is a simple text file which is similar to .INI files with the extension .ISS. In this script file the contents are arranged in sections. These scripts are easy to understand and uses a simple syntax. The section starts with the Section Name which is enclosed in square brackets. Each section handles a specific function of the installation.
+
+![Inno_Setup_screenshot](https://user-images.githubusercontent.com/88676535/158381524-da8cec50-b41c-4ebc-9dea-c62789c6d03f.png)
+
+Setup: This section consists of settings and application related information like application name, publisher name etc.
+Languages: List of languages supported.
+Tasks: Tasks to be performed by the setup during the installation.
+Files: Files to be copied to the User's system.
+Icons: The Application shortcuts: Start menu folders, etc. are defined here.
+Run: Any executable to be executed after the installation is completed.
+
+
+Script files are usually edited from inside the Setup Compiler program. After you have finishing writing the script, the next and final step is select "Compile" in the Setup Compiler. What this does is create a complete, ready-to-run Setup program based on your script. By default, this is created in a directory named "Output" under the directory containing the script.
+
+To give you an idea of how this all works, start the Setup Compiler, click File | Open, and select one of the script files in the Examples subdirectory located under the Inno Setup directory. (It may be helpful to use the sample scripts as a template for your own scripts.)
+
+
 ### Creating the installer using Inno Setup involves the following two steps:
 * Create Inno Script file
 * Compile the Script file
+
+
+![image](https://user-images.githubusercontent.com/88676535/158379580-6ff46363-e8c2-4fa4-8dbd-dde65d5f5b10.png)
+![mysql-server](https://user-images.githubusercontent.com/88676535/158379796-9d118191-05e4-48e8-b383-22f5ee2cee27.JPG)
+
 
 ## How to Create the Setup
 To create this setup exe file the first thing we have to do is convert our program into executable format:
