@@ -35,7 +35,7 @@ Our Sample Project which is created using the Apache Netbeans IDE 12.6 is a simp
 
 After successffully running the project our user interface Looks as follows
 #### The Main Screen
-![User Profile](images/app-starting-ui.jpeg)
+![User Profile](images/app-home.JPG)
 
 <br />
 <br />
@@ -128,8 +128,8 @@ Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://ww
 
 #### step 8.  Goto 'Basic' tab and specify 3 things
 
-*the output File name and the directory you want it to be stored ( here the exe output should be inside setup-installer-folder as shown in the picture)
-*the jar executable file we had it inside the bin folder 
+* the output File name and the directory you want it to be stored ( here the exe output should be inside setup-installer-folder as shown in the picture)
+* the jar executable file we had it inside the bin folder 
 * and thirdly the icon you want to use for the exe program(it's optional).
 
 #### step 7.
