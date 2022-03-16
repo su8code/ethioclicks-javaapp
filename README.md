@@ -6,7 +6,6 @@
 * [Making executable from Java Program](#convert-jar-program-to-executable-windows-application)
 * [About Inno Setup Compiler](#about-inno-setup-compiler)
 * [Creating our Setup Program](#Creating-our-setup)
-* [References and Licences of 3rd party Softwares Used](#reference)
 
 ## General info
 An installer can either install a new program on your computer or can update a program currently on your hard drive. It can also update or add files to your operating system. Most installers can be run by simply double-clicking the installer icon and then choosing the folder you want to install the software into. The nice thing about installers is that they do all the work for you packaging all you source files into a single setup program and at the end decompressing the program and writing the data on the hard drive. Once the installer is finished, you can often use the new or updated software right away. 
