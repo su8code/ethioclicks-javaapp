@@ -224,7 +224,7 @@ Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""REVOKE ALL ON *.*
 
 ## Configure the app to responsibly Destroy and Remove the Database Instance automatically when the user Uninstall our program 
 
-Inside `[UNINSTALL]` SECTION stop the Database Service and Remove It.
+Inside the `[UNINSTALL]` SECTION stop the Database Service and Remove It.
 
 ![uninstall](https://user-images.githubusercontent.com/88676535/158592098-a021fa19-7760-44dc-8168-e7b4150dd548.JPG)
 
@@ -240,17 +240,17 @@ Since Most Part of MySQL is Developed using C and also some part in C++ for the 
    * to Either Show Error Message and Ask Users to Download the Microsoft Visual C++ Redistribution by themselves
    * or Bundle the Microsoft Visual C++ Redistribution Software and make it Part of our Progrram and install it automatically
    
-The Second Option looks Good and Reasonable so download the Microsoft Visual C++ Redistribution and copy and paste it into the 'bin' folder then in the `[RUN]` Section of the inno script add the following code.
+The Second Option looks Good and Reasonable. so what we did is we downloaded the program and included inside our setup file, goto the official website of microsoft and download the Microsoft Visual C++ Redistribution then after downloading the exe copy and paste it into the 'bin' folder then open the InnoScript file and inside the `[RUN]` Section of the inno script add the following line of code , the code will open up the exe file we have previously downloaded and automatically oepnsup the dialog to start the installation of microsoft visual c++ distribution.
 
 ![vcq](https://user-images.githubusercontent.com/88676535/158591309-2b58a907-96c2-4a32-a7ef-4511ea4346dc.JPG)
 
 `Filename: {app}\bin\VC_redist.x64.exe; Parameters: "/q:a /c:""VCREDI~2.EXE /q:a /c:""""msiexec /i vcredist.msi /qn"""" """; WorkingDir: {app}\bin; StatusMsg: Installing Microsoft Visual C++ ...
 `
 
-we can add capability to check for the existence of Microsoft Visual C++ Redistribution by reading some Windows Registry Key values but in this project we haven't gone much deep into this far.
+Note: we can add capability to check for the existence of Microsoft Visual C++ Redistribution by reading some Windows Registry Key values but in this project we haven't gone much deep this far.
 
 
-#### After You Have Finished doing all of the above now You click to start compiling the script it will take some time but finally will produce the setup exe and store the exe inside the  a folder named 'Output' you can get it inside  the  "setup-installer-folder"  or if you don't find it ther it will be on the Documents folder.
+#### After You Have Finished doing all the above you can now compile the Inno Script by clicking it may take some time but finally Inno Setup compiler will produce the setup exe and store the exe inside the  a folder named 'Output' you can get it inside  the  "setup-installer-folder"  or if you don't find it there it will be  Stored inside the Documents folder.
 
 
 
