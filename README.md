@@ -202,18 +202,10 @@ At this stage we will click on  the Main Application Executable section and dire
 
 Here Comes the time to see the importance of creating "setup-installer-folder", In Other Application files section you only need to select this folder and all the other files folders will be added into our setup program. after seting up this click next and set the options you want based on your need but at the last it will ask you to run compile the script `Don't say Yes to Run the Script ` there are some  more things we got to do. we have to modify the script and add our own code.
 
-## How to Create the Setup
-To create this setup exe file the first thing we have to do is convert our program into executable format:
-
-<br />
-<br />
-<br />
+## Modifying the Inno Script 
 
 
-
-
-
-Before Running the Script and start making setup process once again we need to make sure what we have and prepare all the requird files , folders and resources for our program. as we stated on the introduction section of our documentation we have a plan to embedd the MySQL server into our application. MySQL is open source relational database management system developed using C and  C++ programming languages that is being used to manage database systems, retrieving data from database tables <br />
+Before Running the Script and directly getting into compiling the setup process once again we need to make sure what we have and prepare all the requird files , folders and resources for our program. as we stated on the introduction section of our documentation we have a plan to embedd the MySQL server into our application. MySQL is open source relational database management system developed using C and  C++ programming languages that is being used to manage database systems, retrieving data from database tables <br />
 
 MySQL is released under an open-source license. So you have nothing to pay to use it.<br />
 MySQL is a very powerful program in its own right. It handles a large subset of the functionality of the most expensive and powerful database packages. <br />
