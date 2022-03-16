@@ -200,9 +200,10 @@ After Creating a folder go to inside your MySQL Server Installation Folder for t
 ![mysql-server-dir](https://user-images.githubusercontent.com/88676535/158583836-d1179790-e040-4b83-b8f1-00fd53367e01.JPG)
 
 
-## Configure the MySQL Server to start after the setup program have extracted the application
+## Configure the MySQL Server to start after the setup program have finished extracting
 
-For this javafx we have a Database program is going to be bundled togehther with our program files to achieve this kind of capability for our program we will register independently running mysqld instance during the setup installation process create 
+We will start and activate our MySQL Server during the Setup Process to achieve this kind of capability we will register independently running mysqld instance by modifieng the code inside the `[RUN]` section of the Inno Setup Script. 
+
 ![mysql](https://user-images.githubusercontent.com/88676535/158466217-5fa52128-84f1-4022-9d3a-47dcdcb829a2.JPG)
 
 `
@@ -217,6 +218,8 @@ Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""REVOKE ALL ON *.*
 Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""REVOKE ALL ON *.* FROM 'root'@'%';"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
 ;Filename: {app}\mysql\bin\mysql.exe; Parameters:"--p 3308 -u root   "; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
 `
+
+
 Since Most Part of MySQL is Developed using C and also some part in C++ for the MySQL Server to work properlly it needs Microsoft Visual C++ Redistribution (MSVC) libraries to be already installed on the computer system. The Visual C++ Redistributable Packages install and register all Visual C++ libraries. so for computers tha't don't have Microsoft Visual C++ Redistribution pre installed and configured we have two options 
    * to Either Show Error Message and Ask Users to Download the Microsoft Visual C++ Redistribution by themselves
    * or Bundle the Microsoft Visual C++ Redistribution Software and make it Part of our Progrram and install it automatically
