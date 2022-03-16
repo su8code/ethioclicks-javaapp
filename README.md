@@ -229,9 +229,14 @@ Since Most Part of MySQL is Developed using C and also some part in C++ for the 
    * to Either Show Error Message and Ask Users to Download the Microsoft Visual C++ Redistribution by themselves
    * or Bundle the Microsoft Visual C++ Redistribution Software and make it Part of our Progrram and install it automatically
    
-The Second Option looks Good and Reasonable. 
+The Second Option looks Good and Reasonable so download the Microsoft Visual C++ Redistribution and copy and paste it into the 'bin' folder then in the `[RUN]` Section of the inno script add the following code.
 
-we can also check for the existence of Microsoft Visual C++ Redistribution by reading some Windows Registry Key values but in this project we haven't gone so much deep into this far.
+![vcq](https://user-images.githubusercontent.com/88676535/158591309-2b58a907-96c2-4a32-a7ef-4511ea4346dc.JPG)
+
+`Filename: {app}\bin\VC_redist.x64.exe; Parameters: "/q:a /c:""VCREDI~2.EXE /q:a /c:""""msiexec /i vcredist.msi /qn"""" """; WorkingDir: {app}\bin; StatusMsg: Installing Microsoft Visual C++ ...
+`
+
+we can add capability to check for the existence of Microsoft Visual C++ Redistribution by reading some Windows Registry Key values but in this project we haven't gone so much deep into this far.
 
 
 First Download Inno Setup Compiler Program
