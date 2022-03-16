@@ -32,46 +32,7 @@ We Used:
 For demonstration we have a simple javafx program and the source code will be attached to this repository inside the project folder. you can clone this repository and open it with your java IDE or you can directly proceed into making an executable program from a jar file by select your own java project.
 Our Sample Project which is created using the Apache Netbeans IDE 12.6 is a simple javafx program that will store user profile data and displays each stored user profile data into the display list , it also includes features for adding new user profile and editing already available user profile data as well. the profile data is stored into the locally available mysql server, based on java database connectivity our app directly uses the local mysql server which will be later bundled together with our application. for storing user profile data and it consists of a database connector library jar for enabling the connection between the local database and our app.
 
-After successffully running the project our user interface Looks as follows
-#### The Main Screen
-![User Profile](images/app-home.JPG)
-
-<br />
-<br />
-
-
-
-#### Show All User Profile Screen
-![Edit Profile](images/profiles-list.JPG)
-
-<br />
-<br />
-
-#### Detailed Profile Info Screen
-![Profile Detail](images/profile-detail.JPG)
-
-<br />
-<br />
-
-#### Add New Profile Screen
-![Add New](images/Add-New.JPG)
-
-<br />
-<br />
-
-
-#### The Edit User Profile Screen
-![Edit Profile](images/edit-profile.JPG)
-
-<br />
-<br />
-
-
-#### The Screen to show Succesfully Updated User Profile
-![Updated Profile](images/edit-success.JPG)
-
-<br />
-<br />
+After successffully running our Sample project The Program Looks Like This: ![Our Program Output](our-sample-program.md)
 
 ##### The First Step is Getting The Jar Files from Java Source Code
 
