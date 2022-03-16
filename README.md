@@ -192,9 +192,13 @@ Download and Install the Inno Setup Compiler Appllication
 
 open up Inno Setup Compiler and click create a new script file using the script wizard and it will directly olen GUI interface and the application will finally generate the script file for you.
 
-![image](https://user-images.githubusercontent.com/88676535/158379580-6ff46363-e8c2-4fa4-8dbd-dde65d5f5b10.png)
-![mysql-server](https://user-images.githubusercontent.com/88676535/158379796-9d118191-05e4-48e8-b383-22f5ee2cee27.JPG)
+![inno](https://user-images.githubusercontent.com/88676535/158459942-d5b65d66-565a-455a-832c-4f7ab58a5e5f.JPG) <br />
 
+On The Popup Form Specify The Application Name , Application Version Number and some other basic informations related to the application and Click next. Another Input Box Will Popup and will Ask you to specify the Destination Folder weather to allow users change the name or use the specified folder name only but  We can leave it in the default value and click next. 
+
+![appp](https://user-images.githubusercontent.com/88676535/158593941-a918de43-7465-487b-b9c2-f23bc1a77c66.JPG) <br />
+
+At this step  we will specify our exe file inside the 
 
 ## How to Create the Setup
 To create this setup exe file the first thing we have to do is convert our program into executable format:
@@ -203,7 +207,6 @@ To create this setup exe file the first thing we have to do is convert our progr
 <br />
 <br />
 
-![inno](https://user-images.githubusercontent.com/88676535/158459942-d5b65d66-565a-455a-832c-4f7ab58a5e5f.JPG)
 
 
 
