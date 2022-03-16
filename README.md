@@ -2,7 +2,7 @@
 ## 
 ## Table of contents
 * [General Info](#general-info)
-* [Technologies we Used](#technologies)
+* [Technologies we Used](#technologies-we-used)
 * [Making executable from Java Program](#convert-jar-program-to-executable-windows-application)
 * [About Inno Setup Compiler](#about-inno-setup-compiler)
 * [Creating our Setup Program](#Creating-our-setup)
@@ -11,10 +11,11 @@
 ## General info
 An installer can either install a new program on your computer or can update a program currently on your hard drive. It can also update or add files to your operating system. Most installers can be run by simply double-clicking the installer icon and then choosing the folder you want to install the software into. The nice thing about installers is that they do all the work for you packaging all you source files into a single setup program and at the end decompressing the program and writing the data on the hard drive. Once the installer is finished, you can often use the new or updated software right away. 
 
-This is a Documentation to show how installer program is created for a java program. for demonstraion purpose we have a simple user profile viewer GUI application, our java program includes other external mysql connecter library and some configuration file we also planned to include our own java runtime environment which enables the app to run on any windows computer including windows that don't have java already installed on and also we planned to embedd the MySQL Database Server program which would be an independently running MySQL Server we would like to embedd the server and make it part of our Application Program and for such scenarios and for projects with a lot of independently running software components and resources setup installers are very helpfull and great tools to bundle all these program files and components together into a single and relatively small size setup program which makes distributing the final application to end users very easy. 
-## Technologies
-Tools and Programs  Used 
-We Used:
+This is a Documentation to show how installer program is created for a java program. for demonstraion purpose we have a simple user profile viewer GUI application, our java program includes other external mysql connecter library and some configuration file we also planned to include our own java runtime environment which enables the app to run on any windows computer including windows that don't have java already installed on and also we planned to embedd the MySQL Database Server program which would be an independently running MySQL Server we would like to embedd the server and make it part of our Application Program and for such scenarios and for projects with a lot of independently running software components and resources setup installers are very helpfull and great tools for packaging program files and software components together into a single and relatively small size setup program which makes distributing the final application to end users very easy. 
+## Technologies We Used
+
+Tools and Programs We Used:
+
 * Mysql Server V5.6  
      for our sample java project the Database to store each users profile data
 * Launch4j 
@@ -37,14 +38,14 @@ After successffully running our Sample project The Program Looks Like This: [Cli
 
 ##### The First Step is Getting The Jar Files from Java Source Code
 
-After successully configuring and testing the project the next step is to get the jar binary file from the finished final javafx project source code , if you know how to do it yourself it's great but if you don't know how to do it it's also awesome you are going to learn how to do it by yourself with this documentation, The steps used to export the java source code into a jar executable program varies from one IDE to other IDE's because of this we have provided a link down bellow to show you in detail and clear way to  get the jar executable file on mostly used java Integrated Development Environment's but if you are using another type of java IDE kindly search for how you can export the java source code into jar executable binary file for your specific IDE. 
+After successully configuring and testing the project we have to get the jar binary file from the finished final javafx project source code , if you know how to do it yourself it's great but if you don't know how to do it it's also awesome you are going to learn how to do it by yourself with this documentation, The steps used to export the java source code into a jar executable program varies from one IDE to other IDE's because of this we have provided a link down bellow to show you in detail and clear way to  get the jar executable file on mostly used java Integrated Development Environment's but if you are using another type of java IDE kindly search for how you can export the java source code into jar executable binary file for your specific IDE. 
 
 
 * [How to get .jar file on Eclipse](https://www.tutorialspoint.com/eclipse/eclipse_create_jar_files.htm)
 * [How to get .jar file in Netbeans](https://www.bing.com/search?q=getting+jar+netbeans&qs=n&form=QBRE&sp=-1&pq=getting+jar+&sc=8-12&sk=&cvid=A5111694CC544D6FA9837318283F016F)
 * [How to get .jar file in Intellij IDEA](https://blog.karthicr.com/posts/2016/07/10/creating-an-executable-jar-in-intellij-idea/)
 
-even if the steps for Extracting  the jar file vary from one IDE to other IDE in all integrated development environments after successfully building and exporting the project our IDE will create the jar file inside our project folder including the libraries our project is configured to include(external libraries will be stored inside the lib folder along our .jar file).
+Even if the steps for Extracting  the jar file vary from one IDE to other IDE , in all integrated development environments after successfully building and exporting the project our IDE will create the jar file inside our project folder including the libraries our project is configured to include(external libraries will be stored inside the lib folder along our .jar file).
 
 After Successfully making your jar file you will get an output like this
 ![Edit Profile](images/jar.JPG)
@@ -155,26 +156,6 @@ AppName=My Program
 Source: "MYPROG.EXE"; DestDir: "{app}"
 `
 
-Note that it is legal to specify multiple sections of the same name.
-
-You can put "comments" in the script (which are ignored by the compiler) by placing a semicolon at the beginning of a line. For example:
-
-`
-; This is a comment. I could put reminders to myself here...
-`
-
-A C-like #include directive is supported, which pulls in lines from a separate file into the script at the position of the #include directive. The syntax is:
-
-`#include "filename.txt"`
-If the filename is not fully qualified, the compiler will look for it in the same directory as the file containing the #include directive. The filename may be prefixed by "compiler:", in which case it looks for the file in the Compiler directory.
-
-A #preproc directive is supported, which specifies whether to use the built-in preprocessor which only supports the above #include directive or to use Inno Setup Preprocessor (ISPP) which supports many more directives. The syntax is:
-
-`
-#preproc builtin <br />
-#preproc ispp <br />
-By default, scripts use ISPP if available, and .isl files use the built-in preprocessor.
-`
 
 ## Creating Our Setup
 
@@ -190,22 +171,25 @@ Download link:
 
 Download and Install the Inno Setup Compiler Appllication 
 
-open up Inno Setup Compiler and click create a new script file using the script wizard and it will directly olen GUI interface and the application will finally generate the script file for you.
+open up Inno Setup Compiler and click on the option "create a new script file using the script wizard" you see on the screen and it will directly open the GUI interface for you. but if you rather prefer writting all the code by yourself very good you can go ahead click start empty script and start typing the script by yourself but if you are not famillier with the Inno  Script and you mostly want easy ways the GUI Option is prolific. as simple as there is a form you have to fill and the app will generate the script file for you , fantastic and time saving.
 
 ![inno](https://user-images.githubusercontent.com/88676535/158459942-d5b65d66-565a-455a-832c-4f7ab58a5e5f.JPG) <br />
 
-On The Popup Form Specify The Application Name , Application Version Number and some other basic informations related to the application and Click next. Another Input Box Will Popup and will Ask you to specify the Destination Folder weather to allow users change the name or use the specified folder name only but  We can leave it in the default value and click next. 
+On The Popup Form Specify The Application Name , Application Version Number and some other basic informations related to the application and Click next. Another Input Box Will Popup and will Ask you to specify the Destination Folder weather to allow users change the destination name or use the specific folder name  but almost all the default values are all very nice and we can leave them untouched  and proceed by clicking next. 
 
 ![appp](https://user-images.githubusercontent.com/88676535/158593941-a918de43-7465-487b-b9c2-f23bc1a77c66.JPG) <br />
 
 At this stage we will click on  the Main Application Executable section and directly select the exe inside our folder 'setup-installer-folder' which is the executable generated by launch4j. <br />
 
-Here Comes the time to see the importance of creating "setup-installer-folder", In Other Application files section you only need to select this folder and all the other files folders will be added into our setup program. after seting up this click next and set the options you want based on your need but at the last it will ask you to run compile the script `Don't say Yes to Run the Script ` there are some  more things we got to do. we have to modify the script and add our own code.
+Here Comes the time to see the importance of creating "setup-installer-folder", In Other Application files section you only need to select "setup-installer-folder" folder and all the other files folders will be added recursively into our setup program. after setting up this click next and go to the next screen and set the options you want based on your need, but at the last it will ask you to compile the script. `Don't say Yes to Run the Script ` there are some  more things we got to do. we have to modify the script and add our own code.
+
+#####  At this time i believe we all have our own basic inno script code cool ,  before rolling into the next step let's save our script we have to save our script file on a place we remember. 
+
 
 ## Modifying the Inno Script 
 
 
-Before Running the Script and directly getting into compiling the setup process once again we need to make sure what we have and prepare all the requird files , folders and resources for our program. as we stated on the introduction section of our documentation we have a plan to embedd the MySQL server into our application. MySQL is open source relational database management system developed using C and  C++ programming languages that is being used to manage database systems, retrieving data from database tables <br />
+Before Running the Script and directly getting into compiling the setup process once again we need to make sure what we have and prepare all the requird files , folders and resources for our program. as we stated on the introduction section of our documentation we have a plan to embedd the MySQL server into our application. MySQL is open source relational database management system developed using C and  C++ programming languages that is being used to, manage database systems , retrieving data from database tables and so many more <br />
 
 MySQL is released under an open-source license. So you have nothing to pay to use it.<br />
 MySQL is a very powerful program in its own right. It handles a large subset of the functionality of the most expensive and powerful database packages. <br />
