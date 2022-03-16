@@ -228,7 +228,7 @@ Inside `[UNINSTALL]` SECTION stop the Database Service and Remove It.
 
 ![uninstall](https://user-images.githubusercontent.com/88676535/158592098-a021fa19-7760-44dc-8168-e7b4150dd548.JPG)
 
-`; uninstall mysql and tomcat as services  
+`  
 Filename: net.exe; Parameters:stop mysql; StatusMsg: Initialisation du service mysql; 
 Filename: "{app}\mysql\bin\mysqld.exe"; Parameters: "--remove mysql"
 `
