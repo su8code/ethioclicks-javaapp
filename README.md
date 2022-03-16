@@ -142,19 +142,6 @@ Script files are usually edited from inside the Setup Compiler program. After yo
  
 To give you an idea of how this all works, start the Setup Compiler, click File | Open, and select one of the script files in the Examples subdirectory located under the Inno Setup directory. (It may be helpful to use the sample scripts as a template for your own scripts.)
 
-## Script Format Overview
-Inno Setup Scripts are arranged into sections. Each section controls a different aspect of the installation. A section is started by specifying the name of the section enclosed in square brackets []. Inside each section is any number of entries.
-
-There are two different main types of sections: those such as [Setup] whose entries contain directive names and values (in the form Directive=Value), and those such as [Files] whose entries are divided into parameters.
-
-Here is an example:
-`
-[Setup]
-AppName=My Program
-
-[Files]
-Source: "MYPROG.EXE"; DestDir: "{app}"
-`
 
 
 ## Creating Our Setup
