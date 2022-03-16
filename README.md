@@ -6,7 +6,6 @@
 * [Making executable from Java Program](#convert-jar-program-to-executable-windows-application)
 * [About Inno Setup Compiler](#about-inno-setup-compiler)
 * [Creating our Setup Program](#Creating-our-setup)
-* [Other Available Installers](#Installers)
 * [References and Licences of 3rd party Softwares Used](#reference)
 
 ## General info
@@ -105,13 +104,13 @@ Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://ww
 
  * first tick the 'Custom Classpath' after clicking the checkbox it will activate the view bellow the checkbox (#1)
  * then down below the checkbox on '*Main Class' column tap on the button indicated with the number 2  and select the jar file once again
- * after selecting the jar file located inside the bin folder lanch4j app will populate and fill the input boxes automatically but on our scenario we have to edit and make them suitable for our specific project so let's click on the database connecter jar file you see and click the Edit Item.
- * inside Edit item add 'bin/' before the path to database connecter library as shown in the picture above and finally tap on accept button the next sreen you will see look as follows  <br /> 
+ * after selecting the jar file located inside the bin folder lanch4j app will populate and fill the input boxes automatically but on our scenario we have to edit and make them suitable for our specific project so let's click on the database connecter jar file you see and goto the Edit Item.
+ * inside Edit item add 'bin/' before the path to database connecter library as shown in the picture and finally tap on accept button the next sreen you will see look as follows  <br /> 
  ![class path success](images/launch4j/classpath-tab2.JPG)
 
 #### step 10. Done we have successfully configured the basic setting for the launch4j app to create our exe windows application
 
-but we want the executable program to use our own bundled java runtime. fortunately launch4j program allows us to specify which jre to use for our app during program execution. to apply these settings we have to set some values inside the jre tab goto 'jre' tab in launch4j app and type the path to our jre in the provided input box as shown in the picture bellow then finally start the process of creating exe by clicking the icon button you see pointed by the arrow labeled 2 <br />
+but one more thing left, we want our executable program to use our own bundled java runtime. fortunately launch4j program allows us to specify which jre to use for our app during program execution. to apply these settings we have to set some values inside the jre tab goto 'jre' tab in launch4j app and type the path to our jre in the provided input box as shown in the picture bellow then finally start the process of creating exe by clicking the icon button you see pointed by the arrow labeled 2 <br />
 ![Create JRE folder](images/launch4j/run.JPG)
 
 #### step 11. Finally launch4j will successfully build our exe file and store it on the output path with a name we have previously specified 
@@ -153,12 +152,17 @@ Here is an example:
 AppName=My Program
 
 [Files]
-Source: "MYPROG.EXE"; DestDir: "{app}" `
+Source: "MYPROG.EXE"; DestDir: "{app}"
+
+`
 Note that it is legal to specify multiple sections of the same name.
 
 You can put "comments" in the script (which are ignored by the compiler) by placing a semicolon at the beginning of a line. For example:
 
+`
 ; This is a comment. I could put reminders to myself here...
+`
+
 A C-like #include directive is supported, which pulls in lines from a separate file into the script at the position of the #include directive. The syntax is:
 
 #include "filename.txt"
@@ -172,8 +176,24 @@ A #preproc directive is supported, which specifies whether to use the built-in p
 By default, scripts use ISPP if available, and .isl files use the built-in preprocessor.
 `
 
+## 
+
 
 ## Creating Our Setup
+
+Before Proceeding to making setup process once again we need to make sure what we have and prepare all the requird files , folders and resources for our program. as we stated on the introduction section of our documentation we have a plan to embedd the MySQL server into our application. MySQL is open source relational database management system developed using C and  C++ programming languages that is being used to manage database systems, retrieving data from database tables
+MySQL is becoming so popular because of many good reasons −
+
+MySQL is released under an open-source license. So you have nothing to pay to use it.
+MySQL is a very powerful program in its own right. It handles a large subset of the functionality of the most expensive and powerful database packages.
+MySQL uses a standard form of the well-known SQL data language.
+MySQL works on many operating systems and with many languages including PHP, PERL, C, C++, JAVA, etc.
+MySQL works very quickly and works well even with large data sets.
+MySQL is very friendly to PHP, the most appreciated language for web development.
+MySQL supports large databases, up to 50 million rows or more in a table. The default file size limit for a table is 4GB, but you can increase this (if your operating system can handle it) to a theoretical limit of 8 million terabytes (TB).
+MySQL is customizable. The open-source GPL license allows programmers to modify the MySQL software to fit their own specific environments.
+
+
 First Download Inno Setup Compiler Program
 Download link:
 [Inno Download Link](https://jrsoftware.org/isdl.php)
