@@ -26,7 +26,7 @@ Tools and Programs We Used:
      mysql is depends on this program to work properly
   
  
-Before proceeding to making installer for java programs the first thing we have to do is creating windows native executable .exe from the java jar program, from so many available options we will use Launch4j.exe which is a Windows native executable (.exe) java application wrapper, which Offers native splash screen, application icon, search for JRE or use bundled one, feedback on startup failure, passes command line arguments... much more. after converting jar into executable .exe we will add java runtime , MySQL Database Server and Microsoft Visual C++ together with our executable program  and we will convert them into a single Setup.exe installer program by using a software that creates an installer. InnoSetup is an open source compiler to create installers on windows. 
+Before proceeding to making installer for java programs the first thing we have to do is creating windows native executable .exe from the java jar program, from so many available options out there we will use Launch4j.exe which is the best Windows native executable (.exe) java application wrapper available , which Offers native splash screen, application icon, search for JRE or use bundled one, feedback on startup failure, passes command line arguments... much more. after converting jar into executable .exe we will add java runtime , MySQL Database Server and Microsoft Visual C++ together with our executable program  and we will convert them into a single Setup.exe installer program by using a software that creates an installer. InnoSetup is an open source compiler to create installers on windows. 
 
 ## Convert jar Program to executable Windows Application
 
