@@ -129,12 +129,12 @@ InnoSetup script file is a simple text file which is similar to .INI files with 
 
 ![Inno_Setup_screenshot](https://user-images.githubusercontent.com/88676535/158381524-da8cec50-b41c-4ebc-9dea-c62789c6d03f.png)
 
-Setup: This section consists of settings and application related information like application name, publisher name etc. <br />
-Languages: List of languages supported.   <br />
-Tasks: Tasks to be performed by the setup during the installation. <br />
-Files: Files to be copied to the User's system.  <br />
-Icons: The Application shortcuts: Start menu folders, etc. are defined here. <br />
-Run:  Any executable to be executed after the installation is completed. <br />
+`Setup:` This section consists of settings and application related information like application name, publisher name etc. <br />
+`Languages:` List of languages supported.   <br />
+`Tasks:` Tasks to be performed by the setup during the installation. <br />
+`Files:` Files to be copied to the User's system.  <br />
+`Icons:` The Application shortcuts: Start menu folders, etc. are defined here. <br />
+`Run:`  Any executable to be executed after the installation is completed. <br />
 
 
 Script files are usually edited from inside the Setup Compiler program. After you have finishing writing the script, the next and final step is select "Compile" in the Setup Compiler. What this does is create a complete, ready-to-run Setup program based on your script. By default, this is created in a directory named "Output" under the directory containing the script.  <br />
@@ -153,7 +153,7 @@ AppName=My Program
 
 [Files]
 Source: "MYPROG.EXE"; DestDir: "{app}"
-
+`
 
 Note that it is legal to specify multiple sections of the same name.
 
@@ -165,19 +165,16 @@ You can put "comments" in the script (which are ignored by the compiler) by plac
 
 A C-like #include directive is supported, which pulls in lines from a separate file into the script at the position of the #include directive. The syntax is:
 
-#include "filename.txt"
+`#include "filename.txt"`
 If the filename is not fully qualified, the compiler will look for it in the same directory as the file containing the #include directive. The filename may be prefixed by "compiler:", in which case it looks for the file in the Compiler directory.
 
 A #preproc directive is supported, which specifies whether to use the built-in preprocessor which only supports the above #include directive or to use Inno Setup Preprocessor (ISPP) which supports many more directives. The syntax is:
 
 `
-#preproc builtin
-#preproc ispp
+#preproc builtin <br />
+#preproc ispp <br />
 By default, scripts use ISPP if available, and .isl files use the built-in preprocessor.
 `
-
-## 
-
 
 ## Creating Our Setup
 
@@ -185,18 +182,49 @@ Before Proceeding to making setup process once again we need to make sure what w
 
 MySQL is released under an open-source license. So you have nothing to pay to use it.<br />
 MySQL is a very powerful program in its own right. It handles a large subset of the functionality of the most expensive and powerful database packages. <br />
-MySQL uses a standard form of the well-known SQL data language. <br />
-MySQL works on many operating systems and with many languages including PHP, PERL, C, C++, JAVA, etc. <br />
-MySQL works very quickly and works well even with large data sets. <br />
-MySQL supports large databases, up to 50 million rows or more in a table. The default file size limit for a table is 4GB, but you can increase this (if your operating system can handle it) to a theoretical limit of 8 million terabytes (TB). <br />
+MySQL works very quickly and works well even with large data. <br />
 MySQL is customizable. The open-source GPL license allows programmers to modify the MySQL software to fit their own specific environments. <br />
 
+## Embedding the MySQL Server
 
-Since Most Part of MySQL is Developed using C and also some part in C++ for the MySQL Server to work properlly it needs Microsoft Visual C++ Redistribution (MSVC) libraries to be already installed on the computer system. The Visual C++ Redistributable Packages install and register all Visual C++ libraries. so for computers tha't don't have Microsoft Visual C++ Redistribution pre installed and configured we have two option 
+Download the MySQL server from their Official Website. [Download MySQL](https://dev.mysql.com/downloads/mysql/5.6.html) <br />
+For this Demonstration we Used MySQL Server 5.6 Software You can Download it oon the Official Website with the link provided above
+
+![mysql-server](https://user-images.githubusercontent.com/88676535/158581992-bc15e834-5c0e-4a61-a86a-f28423800a89.JPG)
+
+After Downloading MySQL Server into your Computer let's setup a place for the server in our setup directoy. let's create a folder named 'mysql' inside our "setup-installer-folder"
+
+![mysql](https://user-images.githubusercontent.com/88676535/158582813-8a4f91f4-d833-4a85-9267-9f414fccbf94.JPG)
+
+After Creating a folder go to inside your MySQL Server Installation Folder for this case the folder named 'MySQL Server 5.6 ' and Copy all the contents inside The MySQL Server 5.6 and paste them into 'mysql' directory inside "setup-installer-folder"
+![mysql-server-dir](https://user-images.githubusercontent.com/88676535/158583836-d1179790-e040-4b83-b8f1-00fd53367e01.JPG)
+
+
+## Configure the MySQL Server to start after the setup program have extracted the application
+
+For this javafx we have a Database program is going to be bundled togehther with our program files to achieve this kind of capability for our program we will register independently running mysqld instance during the setup installation process create 
+![mysql](https://user-images.githubusercontent.com/88676535/158466217-5fa52128-84f1-4022-9d3a-47dcdcb829a2.JPG)
+
+`
+Filename: {app}\mysql\bin\mysqld.exe; Parameters:--install mysql;StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
+Filename: net.exe; Parameters:start mysql; StatusMsg: Initialisation du service mysql; Description: Initialisation du service mysql; Flags: runhidden
+Filename: "{sys}\netsh.exe"; Parameters: "firewall add portopening TCP 3306 ""Port MySQL"""; StatusMsg: "Enregistrement par défaut port MySQL ..."; Flags: runhidden; MinVersion: 0,5.01.2600sp2
+Filename: "{sys}\netsh.exe"; Parameters: "firewall set service type = fileandprint mode = enable"; StatusMsg: "Activation du partage de fichier et d'imprimante ..."; Flags: runhidden; MinVersion: 0,5.01.2600sp2
+; grant privileges 
+Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""CREATE USER 'user'@'%' IDENTIFIED BY 'yourPassword'"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
+Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""GRANT ALL ON *.* TO 'user'@'%'"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
+Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""REVOKE ALL ON *.* FROM 'root'@'localhost';"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
+Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""REVOKE ALL ON *.* FROM 'root'@'%';"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
+;Filename: {app}\mysql\bin\mysql.exe; Parameters:"--p 3308 -u root   "; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
+`
+Since Most Part of MySQL is Developed using C and also some part in C++ for the MySQL Server to work properlly it needs Microsoft Visual C++ Redistribution (MSVC) libraries to be already installed on the computer system. The Visual C++ Redistributable Packages install and register all Visual C++ libraries. so for computers tha't don't have Microsoft Visual C++ Redistribution pre installed and configured we have two options 
    * to Either Show Error Message and Ask Users to Download the Microsoft Visual C++ Redistribution by themselves
    * or Bundle the Microsoft Visual C++ Redistribution Software and make it Part of our Progrram and install it automatically
    
-After checking for the existence of Microsoft Visual C++ Redistribution by reading some Windows Registry Key values 
+The Second Option looks Good and Reasonable. 
+
+we can also check for the existence of Microsoft Visual C++ Redistribution by reading some Windows Registry Key values but in this project we haven't gone so much deep into this far.
+
 
 First Download Inno Setup Compiler Program
 Download link:
@@ -224,23 +252,6 @@ To create this setup exe file the first thing we have to do is convert our progr
 
 ![inno](https://user-images.githubusercontent.com/88676535/158459942-d5b65d66-565a-455a-832c-4f7ab58a5e5f.JPG)
 
-## Configure the MySQL Server to start after the setup program have extracted the application
-
-For this javafx we have a Database program is going to be bundled togehther with our program files to achieve this kind of capability for our program we will register independently running mysqld instance during the setup installation process create 
-![mysql](https://user-images.githubusercontent.com/88676535/158466217-5fa52128-84f1-4022-9d3a-47dcdcb829a2.JPG)
-`
-Filename: {app}\mysql\bin\mysqld.exe; Parameters:--install mysql;StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
-Filename: net.exe; Parameters:start mysql; StatusMsg: Initialisation du service mysql; Description: Initialisation du service mysql; Flags: runhidden
-Filename: "{sys}\netsh.exe"; Parameters: "firewall add portopening TCP 3306 ""Port MySQL"""; StatusMsg: "Enregistrement par défaut port MySQL ..."; Flags: runhidden; MinVersion: 0,5.01.2600sp2
-Filename: "{sys}\netsh.exe"; Parameters: "firewall set service type = fileandprint mode = enable"; StatusMsg: "Activation du partage de fichier et d'imprimante ..."; Flags: runhidden; MinVersion: 0,5.01.2600sp2
-; grant privileges 
-Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""CREATE USER 'user'@'%' IDENTIFIED BY 'yourPassword'"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
-Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""GRANT ALL ON *.* TO 'user'@'%'"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
-Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""REVOKE ALL ON *.* FROM 'root'@'localhost';"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
-Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""REVOKE ALL ON *.* FROM 'root'@'%';"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
-;Filename: {app}\mysql\bin\mysql.exe; Parameters:"--p 3308 -u root   "; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
-
-`
 
 ## Add Microsoft Visual C++ Redistribution
 
