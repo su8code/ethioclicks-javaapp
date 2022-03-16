@@ -154,7 +154,7 @@ AppName=My Program
 [Files]
 Source: "MYPROG.EXE"; DestDir: "{app}"
 
-`
+
 Note that it is legal to specify multiple sections of the same name.
 
 You can put "comments" in the script (which are ignored by the compiler) by placing a semicolon at the beginning of a line. For example:
@@ -181,18 +181,22 @@ By default, scripts use ISPP if available, and .isl files use the built-in prepr
 
 ## Creating Our Setup
 
-Before Proceeding to making setup process once again we need to make sure what we have and prepare all the requird files , folders and resources for our program. as we stated on the introduction section of our documentation we have a plan to embedd the MySQL server into our application. MySQL is open source relational database management system developed using C and  C++ programming languages that is being used to manage database systems, retrieving data from database tables
-MySQL is becoming so popular because of many good reasons −
+Before Proceeding to making setup process once again we need to make sure what we have and prepare all the requird files , folders and resources for our program. as we stated on the introduction section of our documentation we have a plan to embedd the MySQL server into our application. MySQL is open source relational database management system developed using C and  C++ programming languages that is being used to manage database systems, retrieving data from database tables <br />
 
-MySQL is released under an open-source license. So you have nothing to pay to use it.
-MySQL is a very powerful program in its own right. It handles a large subset of the functionality of the most expensive and powerful database packages.
-MySQL uses a standard form of the well-known SQL data language.
-MySQL works on many operating systems and with many languages including PHP, PERL, C, C++, JAVA, etc.
-MySQL works very quickly and works well even with large data sets.
-MySQL is very friendly to PHP, the most appreciated language for web development.
-MySQL supports large databases, up to 50 million rows or more in a table. The default file size limit for a table is 4GB, but you can increase this (if your operating system can handle it) to a theoretical limit of 8 million terabytes (TB).
-MySQL is customizable. The open-source GPL license allows programmers to modify the MySQL software to fit their own specific environments.
+MySQL is released under an open-source license. So you have nothing to pay to use it.<br />
+MySQL is a very powerful program in its own right. It handles a large subset of the functionality of the most expensive and powerful database packages. <br />
+MySQL uses a standard form of the well-known SQL data language. <br />
+MySQL works on many operating systems and with many languages including PHP, PERL, C, C++, JAVA, etc. <br />
+MySQL works very quickly and works well even with large data sets. <br />
+MySQL supports large databases, up to 50 million rows or more in a table. The default file size limit for a table is 4GB, but you can increase this (if your operating system can handle it) to a theoretical limit of 8 million terabytes (TB). <br />
+MySQL is customizable. The open-source GPL license allows programmers to modify the MySQL software to fit their own specific environments. <br />
 
+
+Since Most Part of MySQL is Developed using C and also some part in C++ for the MySQL Server to work properlly it needs Microsoft Visual C++ Redistribution (MSVC) libraries to be already installed on the computer system. The Visual C++ Redistributable Packages install and register all Visual C++ libraries. so for computers tha't don't have Microsoft Visual C++ Redistribution pre installed and configured we have two option 
+   * to Either Show Error Message and Ask Users to Download the Microsoft Visual C++ Redistribution by themselves
+   * or Bundle the Microsoft Visual C++ Redistribution Software and make it Part of our Progrram and install it automatically
+   
+After checking for the existence of Microsoft Visual C++ Redistribution by reading some Windows Registry Key values 
 
 First Download Inno Setup Compiler Program
 Download link:
