@@ -178,6 +178,36 @@ By default, scripts use ISPP if available, and .isl files use the built-in prepr
 
 ## Creating Our Setup
 
+### Creating the installer using Inno Setup involves the following two steps:
+* Create Inno Script file
+* Compile the Script file
+
+### Creating Script File is Straight forward and simple 
+
+First Download Inno Setup Compiler Program
+Download link:
+[Inno Download Link](https://jrsoftware.org/isdl.php)
+
+Download and Install the Inno Setup Compiler Appllication 
+
+open up Inno Setup Compiler and click create a new script file using the script wizard and it will directly olen GUI interface and the application will finally generate the script file for you.
+
+![image](https://user-images.githubusercontent.com/88676535/158379580-6ff46363-e8c2-4fa4-8dbd-dde65d5f5b10.png)
+![mysql-server](https://user-images.githubusercontent.com/88676535/158379796-9d118191-05e4-48e8-b383-22f5ee2cee27.JPG)
+
+
+## How to Create the Setup
+To create this setup exe file the first thing we have to do is convert our program into executable format:
+
+<br />
+<br />
+<br />
+
+![inno](https://user-images.githubusercontent.com/88676535/158459942-d5b65d66-565a-455a-832c-4f7ab58a5e5f.JPG)
+
+
+
+
 Before Running the Script and start making setup process once again we need to make sure what we have and prepare all the requird files , folders and resources for our program. as we stated on the introduction section of our documentation we have a plan to embedd the MySQL server into our application. MySQL is open source relational database management system developed using C and  C++ programming languages that is being used to manage database systems, retrieving data from database tables <br />
 
 MySQL is released under an open-source license. So you have nothing to pay to use it.<br />
@@ -250,33 +280,6 @@ The Second Option looks Good and Reasonable so download the Microsoft Visual C++
 `
 
 we can add capability to check for the existence of Microsoft Visual C++ Redistribution by reading some Windows Registry Key values but in this project we haven't gone much deep into this far.
-
-
-First Download Inno Setup Compiler Program
-Download link:
-[Inno Download Link](https://jrsoftware.org/isdl.php)
-
-Download and Install the Inno Setup Compiler Appllication 
-
-### Creating the installer using Inno Setup involves the following two steps:
-* Create Inno Script file
-* Compile the Script file
-
-### Creating Script File is Straight forward and simple 
-open up Inno Setup Compiler and click create a new script file using the script wizard and it will directly olen GUI interface and the application will finally generate the script file for you.
-
-![image](https://user-images.githubusercontent.com/88676535/158379580-6ff46363-e8c2-4fa4-8dbd-dde65d5f5b10.png)
-![mysql-server](https://user-images.githubusercontent.com/88676535/158379796-9d118191-05e4-48e8-b383-22f5ee2cee27.JPG)
-
-
-## How to Create the Setup
-To create this setup exe file the first thing we have to do is convert our program into executable format:
-
-<br />
-<br />
-<br />
-
-![inno](https://user-images.githubusercontent.com/88676535/158459942-d5b65d66-565a-455a-832c-4f7ab58a5e5f.JPG)
 
 
 
