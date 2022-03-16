@@ -12,7 +12,7 @@
 ## General info
 An installer can either install a new program on your computer or can update a program currently on your hard drive. It can also update or add files to your operating system. Most installers can be run by simply double-clicking the installer icon and then choosing the folder you want to install the software into. The nice thing about installers is that they do all the work for you packaging all you source files into a single setup program and at the end decompressing the program and writing the data on the hard drive. Once the installer is finished, you can often use the new or updated software right away. 
 
-This is a documentation to show how installer program is created for a java program.for demonstraion purpose we have a simple user profile viewer GUI application which is made using java Programming language, our java program it needs many other external libraries and files as well as configuration file to work properly also it includes it's own java runtime environment and it's own independently running Mysql Server, in such scenarios installer programs are very much helpful and great tools they will bundle all these files together into a single and relatively small size setup program and makes distributing your final app to your end users very easy. before proceeding to making installer for java programs the first thing we have to do is creating windows native executable .exe from the java jar program, there are many programs available to create exe but here we will use Launch4j.exe app which is Windows native executable (.exe) java application wrapper, which Offers native splash screen, application icon, search for JRE or use bundled one, feedback on startup failure, passes command line arguments... much more. after converting jar into executable .exe the next step is to add all the neccessary files, images and dependencies and libraries together with our executable exe file  and convert them into a single setup.exe program by using setup compiler program. we used Inno setup compiler for creating our installer setup.exe program . InnoSetup is an open source compiler to create installers on windows. It is a free and provides a rich feature set. You can create professional looking installers for the end user. we will see how we are goining to create our own setup.exe from  our sample java program also these steps can be applied for any exe executables you have created by any programming language available, i will explain the basic concepts and steps involved in creating a simple setup of any exe file you want to deploy and share it to end users using installers.
+This is a documentation to show how installer program is created for a java program. for demonstraion purpose we have a simple user profile viewer GUI application which is made using the java Programming language, our java program includes other external mysql connecter .jar library and some configuration files to work properly we also planned to include it's own java runtime environment for the app to work on any windows computers that don't have java already installed properlly and also there will be a local mysql database server which would be an independently running Mysql Server which is part of our application program for such scenarios and for projects with a lot of independently running components setup installers are very helpfull and great tools to bundle all these program files and components together into a single and relatively small size setup program which makes distributing the final application to end users very easy. before proceeding to making installer for java programs the first thing we have to do is creating windows native executable .exe from the java jar program, from so many available options we will use Launch4j.exe which is a Windows native executable (.exe) java application wrapper, which Offers native splash screen, application icon, search for JRE or use bundled one, feedback on startup failure, passes command line arguments... much more. after converting jar into executable .exe we will add java runtime , mysql server and microsoft visual c++ together with our executable exe program  and convert them into a single setup.exe installer program by using a software that creates an installer. InnoSetup is an open source compiler to create installers on windows. It is a free and provides a rich feature set. You can create professional looking installers for the end user.
 ## Technologies
 Tools and Programs  Used 
 We Used:
@@ -24,13 +24,12 @@ We Used:
      to pack our application exe our icons configuration files as well as all the folders into a single setup program
 * Microsoft Visual C++ Distrbution X64 
      mysql is depends on this program to work properly
-	
-	
+  
+  
 
 ## Convert jar Program to executable Windows Application
 
 For demonstration we have a simple javafx program and the source code will be attached to this repository inside the project folder. you can clone this repository and open it with your java IDE or you can directly proceed into making an executable program from a jar file by select your own java project.
-
 Our Sample Project which is created using the Apache Netbeans IDE 12.6 is a simple javafx program that will store user profile data and displays each stored user profile data into the display list , it also includes features for adding new user profile and editing already available user profile data as well. the profile data is stored into the locally available mysql server, based on java database connectivity our app directly uses the local mysql server which will be later bundled together with our application. for storing user profile data and it consists of a database connector library jar for enabling the connection between the local database and our app.
 
 After successffully running the project our user interface Looks as follows
@@ -97,12 +96,11 @@ Launch4j is a cross-platform tool for wrapping Java applications distributed as 
 – Launch4j's website
 [Download Launch4j exe Here](http://launch4j.sourceforge.net/)
 
-
 After successfullly finishing the above now we will have our jar file and all the neccessary libraries in our hand the next step will be to convert this jar program into an executable program , so please follow the following steps one by one.
  
 Let's set our Folder Structure suitable for creating the executable as well as well organized for making the setup later on.
 
-#### step 1. Create a new folder under your desktop or other place and name it 'setup-installer-folder'
+#### step 1. Create a new folder under your Desktop or other place and name it 'setup-installer-folder'
 #### step 2. Goto inside 'setup-installer-folder' and create another folder and name it 'bin'
 #### step 3. Then Copy the extracted jar file and the 'lib' folder into the newly created 'bin' folder
 #### step 4. Copy the 'config' and 'ethioClicksImages' folders and the 'icon.png' image from files folder of this repository into your 'setup-installer-folder' folder 
@@ -148,7 +146,7 @@ Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://ww
  * inside Edit item add 'bin/' before the path to database connecter library as shown in the picture above and finally tap on accept button the next sreen you will see look as follows  <br /> 
  ![class path success](images/launch4j/classpath-tab2.JPG)
 
-#### step 10. Done we have successfully configured the basic setting for the launch4j app to create our exe windows application 
+#### step 10. Done we have successfully configured the basic setting for the launch4j app to create our exe windows application
 
 but we want the executable program to use our own bundled java runtime. fortunately launch4j program allows us to specify which jre to use for our app during program execution. to apply these settings we have to set some values inside the jre tab goto 'jre' tab in launch4j app and type the path to our jre in the provided input box as shown in the picture bellow then finally start the process of creating exe by clicking the icon button you see pointed by the arrow labeled 2 <br />
 ![Create JRE folder](images/launch4j/run.JPG)
@@ -169,12 +167,12 @@ InnoSetup script file is a simple text file which is similar to .INI files with 
 
 ![Inno_Setup_screenshot](https://user-images.githubusercontent.com/88676535/158381524-da8cec50-b41c-4ebc-9dea-c62789c6d03f.png)
 
-`Setup:` This section consists of settings and application related information like application name, publisher name etc. <br />
-`Languages:` List of languages supported.   <br />
-`Tasks:` Tasks to be performed by the setup during the installation. <br />
-`Files:` Files to be copied to the User's system.  <br />
-`Icons:` The Application shortcuts: Start menu folders, etc. are defined here. <br />
-`Run:`  Any executable to be executed after the installation is completed. <br />
+Setup: This section consists of settings and application related information like application name, publisher name etc. <br />
+Languages: List of languages supported.   <br />
+Tasks: Tasks to be performed by the setup during the installation. <br />
+Files: Files to be copied to the User's system.  <br />
+Icons: The Application shortcuts: Start menu folders, etc. are defined here. <br />
+Run:  Any executable to be executed after the installation is completed. <br />
 
 
 Script files are usually edited from inside the Setup Compiler program. After you have finishing writing the script, the next and final step is select "Compile" in the Setup Compiler. What this does is create a complete, ready-to-run Setup program based on your script. By default, this is created in a directory named "Output" under the directory containing the script.  <br />
@@ -191,17 +189,16 @@ Here is an example:
 [Setup]
 AppName=My Program
 
-
 [Files]
 Source: "MYPROG.EXE"; DestDir: "{app}" `
 Note that it is legal to specify multiple sections of the same name.
 
 You can put "comments" in the script (which are ignored by the compiler) by placing a semicolon at the beginning of a line. For example:
 
-`; This is a comment. I could put reminders to myself here...`
+; This is a comment. I could put reminders to myself here...
 A C-like #include directive is supported, which pulls in lines from a separate file into the script at the position of the #include directive. The syntax is:
 
-`#include "filename.txt"`
+#include "filename.txt"
 If the filename is not fully qualified, the compiler will look for it in the same directory as the file containing the #include directive. The filename may be prefixed by "compiler:", in which case it looks for the file in the Compiler directory.
 
 A #preproc directive is supported, which specifies whether to use the built-in preprocessor which only supports the above #include directive or to use Inno Setup Preprocessor (ISPP) which supports many more directives. The syntax is:
@@ -218,7 +215,7 @@ First Download Inno Setup Compiler Program
 Download link:
 [Inno Download Link](https://jrsoftware.org/isdl.php)
 
-download and Install the inno setup compiler appllication 
+Download and Install the Inno Setup Compiler Appllication 
 
 ### Creating the installer using Inno Setup involves the following two steps:
 * Create Inno Script file
@@ -237,6 +234,37 @@ To create this setup exe file the first thing we have to do is convert our progr
 <br />
 <br />
 <br />
+
+![inno](https://user-images.githubusercontent.com/88676535/158459942-d5b65d66-565a-455a-832c-4f7ab58a5e5f.JPG)
+
+## Configure the MySQL Server to start after the setup program have extracted the application
+
+For this javafx we have a Database program is going to be bundled togehther with our program files to achieve this kind of capability for our program we will register independently running mysqld instance during the setup installation process create 
+![mysql](https://user-images.githubusercontent.com/88676535/158466217-5fa52128-84f1-4022-9d3a-47dcdcb829a2.JPG)
+`
+Filename: {app}\mysql\bin\mysqld.exe; Parameters:--install mysql;StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
+Filename: net.exe; Parameters:start mysql; StatusMsg: Initialisation du service mysql; Description: Initialisation du service mysql; Flags: runhidden
+Filename: "{sys}\netsh.exe"; Parameters: "firewall add portopening TCP 3306 ""Port MySQL"""; StatusMsg: "Enregistrement par défaut port MySQL ..."; Flags: runhidden; MinVersion: 0,5.01.2600sp2
+Filename: "{sys}\netsh.exe"; Parameters: "firewall set service type = fileandprint mode = enable"; StatusMsg: "Activation du partage de fichier et d'imprimante ..."; Flags: runhidden; MinVersion: 0,5.01.2600sp2
+; grant privileges 
+Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""CREATE USER 'user'@'%' IDENTIFIED BY 'yourPassword'"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
+Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""GRANT ALL ON *.* TO 'user'@'%'"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
+Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""REVOKE ALL ON *.* FROM 'root'@'localhost';"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
+Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""REVOKE ALL ON *.* FROM 'root'@'%';"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
+;Filename: {app}\mysql\bin\mysql.exe; Parameters:"--p 3308 -u root   "; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
+
+`
+
+## Add Microsoft Visual C++ Redistribution
+
+Filename: {app}\bin\VC_redist.x64.exe; Parameters: "/q:a /c:""VCREDI~2.EXE /q:a /c:""""msiexec /i vcredist.msi /qn"""" """; WorkingDir: {app}\bin; StatusMsg: Installing Microsoft Visual C++ ...
+
+## Configure the app to responsibly Destroy and Remove the Database Instance automatically when the user Uninstall our program 
+
+`; uninstall mysql and tomcat as services  
+Filename: net.exe; Parameters:stop mysql; StatusMsg: Initialisation du service mysql; 
+Filename: "{app}\mysql\bin\mysqld.exe"; Parameters: "--remove mysql"
+`
 
 
 [Inno Documentation](https://documentation.help/Inno-Setup/)
