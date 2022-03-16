@@ -178,7 +178,7 @@ By default, scripts use ISPP if available, and .isl files use the built-in prepr
 
 ## Creating Our Setup
 
-Before Proceeding to making setup process once again we need to make sure what we have and prepare all the requird files , folders and resources for our program. as we stated on the introduction section of our documentation we have a plan to embedd the MySQL server into our application. MySQL is open source relational database management system developed using C and  C++ programming languages that is being used to manage database systems, retrieving data from database tables <br />
+Before Running the Script and start making setup process once again we need to make sure what we have and prepare all the requird files , folders and resources for our program. as we stated on the introduction section of our documentation we have a plan to embedd the MySQL server into our application. MySQL is open source relational database management system developed using C and  C++ programming languages that is being used to manage database systems, retrieving data from database tables <br />
 
 MySQL is released under an open-source license. So you have nothing to pay to use it.<br />
 MySQL is a very powerful program in its own right. It handles a large subset of the functionality of the most expensive and powerful database packages. <br />
@@ -224,6 +224,19 @@ Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""REVOKE ALL ON *.*
 ;Filename: {app}\mysql\bin\mysql.exe; Parameters:"--p 3308 -u root   "; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
 `
 
+## Configure the app to responsibly Destroy and Remove the Database Instance automatically when the user Uninstall our program 
+
+Inside `[UNINSTALL]` SECTION stop the Database Service and Remove It.
+
+![uninstall](https://user-images.githubusercontent.com/88676535/158592098-a021fa19-7760-44dc-8168-e7b4150dd548.JPG)
+
+`; uninstall mysql and tomcat as services  
+Filename: net.exe; Parameters:stop mysql; StatusMsg: Initialisation du service mysql; 
+Filename: "{app}\mysql\bin\mysqld.exe"; Parameters: "--remove mysql"
+`
+
+
+## Add Microsoft Visual C++ Redistribution
 
 Since Most Part of MySQL is Developed using C and also some part in C++ for the MySQL Server to work properlly it needs Microsoft Visual C++ Redistribution (MSVC) libraries to be already installed on the computer system. The Visual C++ Redistributable Packages install and register all Visual C++ libraries. so for computers tha't don't have Microsoft Visual C++ Redistribution pre installed and configured we have two options 
    * to Either Show Error Message and Ask Users to Download the Microsoft Visual C++ Redistribution by themselves
@@ -236,7 +249,7 @@ The Second Option looks Good and Reasonable so download the Microsoft Visual C++
 `Filename: {app}\bin\VC_redist.x64.exe; Parameters: "/q:a /c:""VCREDI~2.EXE /q:a /c:""""msiexec /i vcredist.msi /qn"""" """; WorkingDir: {app}\bin; StatusMsg: Installing Microsoft Visual C++ ...
 `
 
-we can add capability to check for the existence of Microsoft Visual C++ Redistribution by reading some Windows Registry Key values but in this project we haven't gone so much deep into this far.
+we can add capability to check for the existence of Microsoft Visual C++ Redistribution by reading some Windows Registry Key values but in this project we haven't gone much deep into this far.
 
 
 First Download Inno Setup Compiler Program
@@ -266,16 +279,6 @@ To create this setup exe file the first thing we have to do is convert our progr
 ![inno](https://user-images.githubusercontent.com/88676535/158459942-d5b65d66-565a-455a-832c-4f7ab58a5e5f.JPG)
 
 
-## Add Microsoft Visual C++ Redistribution
-
-Filename: {app}\bin\VC_redist.x64.exe; Parameters: "/q:a /c:""VCREDI~2.EXE /q:a /c:""""msiexec /i vcredist.msi /qn"""" """; WorkingDir: {app}\bin; StatusMsg: Installing Microsoft Visual C++ ...
-
-## Configure the app to responsibly Destroy and Remove the Database Instance automatically when the user Uninstall our program 
-
-`; uninstall mysql and tomcat as services  
-Filename: net.exe; Parameters:stop mysql; StatusMsg: Initialisation du service mysql; 
-Filename: "{app}\mysql\bin\mysqld.exe"; Parameters: "--remove mysql"
-`
 
 
 [Inno Documentation](https://documentation.help/Inno-Setup/)
