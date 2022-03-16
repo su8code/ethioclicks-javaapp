@@ -279,7 +279,7 @@ The Second Option looks Good and Reasonable so download the Microsoft Visual C++
 we can add capability to check for the existence of Microsoft Visual C++ Redistribution by reading some Windows Registry Key values but in this project we haven't gone much deep into this far.
 
 
-#### After You Have Finished doing all of the above now You can get started and click to start compiling the script it will take some time but finally will produce the setup exe and store the exe inside the  a folder named 'Output' you can get it inside  the  "setup-installer-folder"  or if you don't find it ther it will be on the Documents folder.
+#### After You Have Finished doing all of the above now You click to start compiling the script it will take some time but finally will produce the setup exe and store the exe inside the  a folder named 'Output' you can get it inside  the  "setup-installer-folder"  or if you don't find it ther it will be on the Documents folder.
 
 
 
