@@ -196,15 +196,20 @@ After Downloading MySQL Server into your Computer let's setup a place for the se
 
 ![mysql](https://user-images.githubusercontent.com/88676535/158582813-8a4f91f4-d833-4a85-9267-9f414fccbf94.JPG)
 
-After Creating a folder go to inside your MySQL Server Installation Folder for this case the folder named 'MySQL Server 5.6 ' and Copy all the contents inside The MySQL Server 5.6 and paste them into 'mysql' directory inside "setup-installer-folder"
+After Creating a folder We have to go into inside the MySQL Server Installation Folder for this case the folder named 'MySQL Server 5.6 ' and then we have to Copy all the contents inside that MySQL Server 5.6 directory and paste them into our new folder 'mysql' directory inside "setup-installer-folder"
 ![mysql-server-dir](https://user-images.githubusercontent.com/88676535/158583836-d1179790-e040-4b83-b8f1-00fd53367e01.JPG)
 
+##### Well Now We Have Done Adding MySQL server Program into Our Program Directory the next how we are going to use it.
+
+Once Copied into our own directory together with our executable Application How are We Going to Use the MySQL Server?
 
 ## Configure the MySQL Server to start after the setup program have finished extracting
 
-We will start and activate our MySQL Server during the Setup Process to achieve this kind of capability we will register independently running mysqld instance by modifieng the code inside the `[RUN]` section of the Inno Setup Script. 
+Well We will start and activate our MySQL Server after the Setup has finished extracting all the program files and folders. we will achieve this kind of capability by exploiting the functionality of  `[RUN]` Section of the Inno Setup Compiler  Since the Inno Setup Compiler `[RUN]` section of Script allows Any executable to be executed after the installation is completed we will alter the `[RUN]` section and execute some mysql commands to create myslqld instance , register the port on firewall and register the mysqld instance as a windows service as well as creating a new mysql user with full privelege on all the  available database and tables.
 
-![mysql](https://user-images.githubusercontent.com/88676535/158466217-5fa52128-84f1-4022-9d3a-47dcdcb829a2.JPG)
+The Inno Script Code that will Add MySQL as a Windows Service , Registers the port in the firewall Setting and Starts The MySQL Server when the system boots as well us which create user is available bellow or you can use your mysql skill's and you can make the code better. you can copy the code bellow and modify the code inside the `[RUN]` section of the Inno Setup Script. 
+
+![mysql-code](https://user-images.githubusercontent.com/88676535/158587265-c2e59d81-86f0-43cc-bcab-eb302e1d478c.JPG)
 
 `
 Filename: {app}\mysql\bin\mysqld.exe; Parameters:--install mysql;StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
