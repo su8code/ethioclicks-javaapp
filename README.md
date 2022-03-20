@@ -243,16 +243,16 @@ The Second Option looks Good and Reasonable. so what we did is we downloaded the
 
 ![vcq](https://user-images.githubusercontent.com/88676535/158591309-2b58a907-96c2-4a32-a7ef-4511ea4346dc.JPG)
 
-`Filename: {app}\bin\VC_redist.x64.exe; Parameters: "/q:a /c:""VCREDI~2.EXE /q:a /c:""""msiexec /i vcredist.msi /qn"""" """; WorkingDir: {app}\bin; StatusMsg: Installing Microsoft Visual C++ ...
-`
+```
+
+Filename: {app}\bin\VC_redist.x64.exe; Parameters: "/q:a /c:""VCREDI~2.EXE /q:a /c:""""msiexec /i vcredist.msi /qn"""" """; WorkingDir: {app}\bin; StatusMsg: Installing Microsoft Visual C++ ...
+
+```
 
 Note: we can add capability to check for the existence of Microsoft Visual C++ Redistribution by reading some Windows Registry Key values but in this project we haven't gone much deep this far.
 
 
 #### After You Have Finished doing all the above you can now compile the Inno Script. it may take some time but finally Inno Setup compiler will produce the setup exe and store the exe inside the  a folder named 'Output' you can get it inside  the  "setup-installer-folder"  or if you don't find it there it will be  Stored inside the Documents folder.
-
-
-
 
 
 
