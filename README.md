@@ -208,7 +208,7 @@ The Inno Script Code that will Add MySQL as a Windows Service , Registers the po
 
 ![mysql-code](https://user-images.githubusercontent.com/88676535/158587265-c2e59d81-86f0-43cc-bcab-eb302e1d478c.JPG)
 
-`
+```
 Filename: {app}\mysql\bin\mysqld.exe; Parameters:--install mysql;StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
 Filename: net.exe; Parameters:start mysql; StatusMsg: Initialisation du service mysql; Description: Initialisation du service mysql; Flags: runhidden
 Filename: "{sys}\netsh.exe"; Parameters: "firewall add portopening TCP 3306 ""Port MySQL"""; StatusMsg: "Enregistrement par défaut port MySQL ..."; Flags: runhidden; MinVersion: 0,5.01.2600sp2
@@ -219,7 +219,7 @@ Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""GRANT ALL ON *.* 
 Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""REVOKE ALL ON *.* FROM 'root'@'localhost';"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
 Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""REVOKE ALL ON *.* FROM 'root'@'%';"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
 ;Filename: {app}\mysql\bin\mysql.exe; Parameters:"--p 3308 -u root   "; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
-`
+```
 
 ## Configure the app to responsibly Destroy and Remove the Database Instance automatically when the user Uninstall our program 
 
