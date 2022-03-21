@@ -18,7 +18,7 @@ Tools and Programs We Used:
 * MysSQL Server V5.6 ([Download MySQL](https://dev.mysql.com/downloads/mysql/5.6.html))
 * Launch4j ([Download Launch4j](http://launch4j.sourceforge.net/)) used to create the exe 
 * Inno Setup Compiler([Download Inno Setup Compiler](https://jrsoftware.org/isdl.php)) used to make the final setup program
-* Microsoft Visual C++ Distrbution X64()
+* Microsoft Visual C++ Redistributable X64([Download Visual C++ Redistributable](https://www.microsoft.com/en-in/download/details.aspx?id=48145)]))
   
  
 Before proceeding to making installer for java programs the first thing we have to do is creating windows native executable .exe from the java jar program, from so many available options out there we will use Launch4j.exe which is the best Windows native executable (.exe) java application wrapper available , which Offers native splash screen, application icon, search for JRE or use bundled one, feedback on startup failure, passes command line arguments... much more. after converting jar into executable .exe we will add java runtime , MySQL Database Server and Microsoft Visual C++ together with our executable program  and we will convert them into a single Setup.exe installer program by using a software that creates an installer. InnoSetup is an open source compiler to create installers on windows. 
@@ -228,13 +228,18 @@ Filename: "{app}\mysql\bin\mysqld.exe"; Parameters: "--remove mysql"
 ```
 
 
-## Add Microsoft Visual C++ Redistribution
+## Add Microsoft Visual C++ Redistributable
 
-Since Most Part of MySQL is Developed using C and also some part in C++ for the MySQL Server to work properlly it needs Microsoft Visual C++ Redistribution (MSVC) libraries to be already installed on the computer system. The Visual C++ Redistributable Packages install and register all Visual C++ libraries. so for computers tha't don't have Microsoft Visual C++ Redistribution pre installed and configured we have two options 
-   * to Either Show Error Message and Ask Users to Download the Microsoft Visual C++ Redistribution by themselves
-   * or Bundle the Microsoft Visual C++ Redistribution Software and make it Part of our Progrram and install it automatically
+Since Most Part of MySQL is Developed using C also some part in C++ and for the MySQL Server to work properlly the Microsoft Visual C++ Redistribution (MSVC) libraries have to be available and already installed on the computer system. The Visual C++ Redistributable Packages install and register all Visual C++ libraries. so for computers tha't don't have Microsoft Visual C++ Redistributable pre installed and configured we have two options 
+   * to Either Show Error Message and Ask Users to Download the Microsoft Visual C++ Redistributable by themselves
+   * or Bundle the Microsoft Visual C++ Redistributable Software and make it Part of our Setup and install it automatically
    
-The Second Option looks Good and Reasonable. so what we did is we downloaded the program and included inside our setup file, goto the official website of microsoft and download the Microsoft Visual C++ Redistribution. after downloading the exe copy and paste it into the `bin` folder inside the `setup-installer-folder` then after coping the program successfully open the InnoScript file and goto the `[RUN]` Section of the script  add the following line of codes , what these codes down bellow will do is the code will run the exe file that we have previously added into our setup folder and it will automatically opens up the app and the dialog to start the installation of microsoft visual c++ distribution will be shown to the user.
+The Second Option looks Good and Reasonable. so what we did is we downloaded the program and included inside our setup file, goto the official website of microsoft and download the Microsoft Visual C++ Redistributable.
+##### Download Microsoft Visual C++ Redistributable
+
+[Download](https://www.microsoft.com/en-in/download/details.aspx?id=48145)])
+
+after downloading the exe copy and paste it into the `bin` folder inside the `setup-installer-folder` then after coping the program successfully open the InnoScript file and goto the `[RUN]` Section of the script  add the following line of codes , what these codes down bellow will do is the code will run the exe file that we have previously added into our setup folder and it will automatically opens up the app and the dialog to start the installation of microsoft visual c++ distribution will be shown to the user.
 
 
 ```
