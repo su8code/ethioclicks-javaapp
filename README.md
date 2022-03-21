@@ -218,7 +218,7 @@ Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""REVOKE ALL ON *.*
 
 ##### Create the Database and the Table
 
-the following code will allow us to create the database `ethioclicks_database` and the table `user_profile_data` inside the MySQL Database Server , therefore we have to add the following lineof code into our `[RUN]` section. click the copy button on the top right corner of the code or directly copy the code and paste it into the inno script `[RUN]` Section.
+Since Our sample java program uses the database `ethioclicks_database`  to store and manage the personal records of all the users added to the program our program needs the database to be present inside the MySQL server we have added together with our Setup so inorder to do that we have added the following line of code into our Inno Setup Script code . the following code will allow us to create the database `ethioclicks_database` and the table `user_profile_data` inside the MySQL Database Server , therefore we have to add the following lineof code into our `[RUN]` section. you can directlly click the copy button you see on the top right corner of the code down bellow or copy it yourself and paste it into the inno script `[RUN]` Section.
 
 ```
 Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""CREATE DATABASE ethioclicks_database;"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
@@ -229,11 +229,14 @@ Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""CREATE TABLE `use
 
 ## Configure the app to responsibly Destroy and Remove the Database Instance automatically when the user Uninstall our program 
 
-Inside the `[UNINSTALL]` SECTION stop the Database Service and Remove It.
+Since Our Database Server Runs independently from our main program , we should have to Specify our setup program to remove the MySQL server Instance upon the user uninstalling our program from their computer system. Inside the `[UNINSTALL]` SECTION we have to stop the Database Service and Remove It. 
 
-![uninstall](https://user-images.githubusercontent.com/88676535/158592098-a021fa19-7760-44dc-8168-e7b4150dd548.JPG)
+goto your Inno Setup Script and find the 
+`[UninstallRun]` section of code but incase if it is not present in your Inno Setup Script you have to write it yourself( mostly it's not foudn so you have to copy the code bellow and paste it into the last line of your Inno Script Code). copy the following code and paste it inside the last line of your Script ( remove  `[UninstallRun]  ` if you already have it in your Script code)
 
 ``` 
+[UninstallRun]   
+; uninstall mysql and tomcat as services
 Filename: net.exe; Parameters:stop mysql; StatusMsg: Initialisation du service mysql; 
 Filename: "{app}\mysql\bin\mysqld.exe"; Parameters: "--remove mysql"
 ```
