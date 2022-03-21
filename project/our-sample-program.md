@@ -1,8 +1,13 @@
-
 #### How To Add This Project into My Development Environment?
 
 
 ##### This Project is a javafx GUI Application Created using the Netbeans v12.6 IDE to open and  successfully run the project inside your Development Environment make sure you have javafx  enabled IDE and You already have installed MySQL Program in Your Computer. 
+
+#### Before Starting to Use this sample project make sure you have the following application Installed on Your Computer
+
+* Netbeans IDE( [Download Netbeans IDE]( https://netbeans.apache.org/download/nb13/nb13.html))
+* XAMP MySQL Server( [Download XAMP MySQL Server](https://www.apachefriends.org/download.html))
+* MySQL Workbench ( (Download MySQL Workbench)[https://dev.mysql.com/downloads/workbench/])
 
 If You Haven't Yet Configured Your IDE to Support JavaFX then goto the Link down bellow and Follow the Provided Step by Step Instruction's 
 
@@ -29,15 +34,17 @@ The Following blog will show you in Detail how you can enable JDBC support withi
 [Blog: Connect MySQL Database Server with Java Project in Netbeans IDE](https://www.tutorialsfield.com/how-to-connect-mysql-database-in-java-using-netbeans)
 
 
-## How To Successfully run The Project on Your Computer ?
+### How To Successfully run The Project on Your Computer ?
 
-### step 1. open the project in netbeans IDE
-### step 2. add the Database Connector Driver into your project([How to Add Database Driver](https://www.tutorialsfield.com/how-to-connect-mysql-database-in-java-using-netbeans))
-### step 3. start your MySQL Server 
-### step 4: under your MySQL Workspace Create the Database named `ethioclicks_database` and inside that make a new table named `user_profile_data`
+#### step 1. open the project in netbeans IDE
+#### step 2. add the Database Connector Driver into your project([How to Add Database Driver](https://www.tutorialsfield.com/how-to-connect-mysql-database-in-java-using-netbeans))
+#### step 3. start your MySQL Server 
+#### step 4: under your MySQL Workspace Create the Database named `ethioclicks_database` and inside that make a new table named `user_profile_data`
 
 
 since the program stores the user personnal informations inside the `ethioclicks_database` database we need to set up and create the database make a table  `user_profile_data` as follows.
+
+The MySQL Workbench Software Will Help Us Run MySQL much easily and you can directly copy the codes here and paste it under your MySQL Workbench to make the database and the table.
 
 Creating Database
 ```
