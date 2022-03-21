@@ -1,7 +1,7 @@
 #### How To Add This Project into My Development Environment?
 
 
-` This Project is a javafx GUI Application Created using the Netbeans v12.6 IDE to open and  successfully run the project inside your Development Environment make sure you have javafx  enabled IDE and You already have installed MySQL Program in Your Computer. `
+ This Project is a javafx GUI Application Created using the Netbeans v12.6 IDE to open and  successfully run the project inside your Development Environment make sure you have javafx  enabled IDE and You already have installed MySQL Program in Your Computer. 
 
 #### Before Starting to Use this sample project make sure you have the following applications Installed on Your Computer
 
