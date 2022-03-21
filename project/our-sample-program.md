@@ -48,7 +48,7 @@ The MySQL Workbench Software Will Help Us Run MySQL much easily and you can dire
 
 Creating Database
 ```
-    CREATE DATABASE ethioclicks_database
+    CREATE DATABASE ethioclicks_database;
     
 ```
 Creating Table
@@ -69,10 +69,10 @@ Creating Table
 ```
 
 
-#### step 4. open the `JavaDatabaseClass.java` and Edit the Credentials( the username as well as the password used to connect with your MySQL Server)
-#### step 5:  after you finish editing the credentials run the project.
+#### step 4. open the `JavaDatabaseClass.java` and Edit the Credentials accordingly (set the username as well as the password used to connect with your MySQL Server)
+#### step 5:  after editing the credentials make sure you have started your MySQL Server and `Run` the project.
 
-#### Successfully Running the project the Output of the sample program will look like as follows
+#### Successfully Running the project the Output of the sample program will look as follows
 
 <br />
 #### The Main Screen
