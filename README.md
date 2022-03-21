@@ -29,7 +29,7 @@ Before proceeding to making installer for java programs the first thing we have 
 To get Started you can clone this repository and open our sample javafx project with your java IDE or you can directly proceed into making an executable program from a jar file by select your own java project.
 Our Sample Project which is created using the Apache Netbeans IDE 12.6 is a simple javafx program that will store user profile data and displays each stored user profile data into the display list , it also includes features for adding new user profile and editing already available user profile data as well. the profile data is stored into the locally available mysql server, based on java database connectivity our app directly uses the local mysql server which will be later bundled together with our application. for storing user profile data and it consists of a database connector library jar for enabling the connection between the local database and our app.
 
-After successffully running our Sample project The Program Looks Like This: [Click Here to View the Sample Program](project/our-sample-program.md)
+Our Sample project: [Goto Our Sample Java Project](project/our-sample-program.md)
 
 ##### The First Step is Getting The Jar Files from Java Source Code
 
