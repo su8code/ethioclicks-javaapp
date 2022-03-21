@@ -38,3 +38,9 @@
 
 <br />
 <br />
+
+
+#### How To Add This Project into My Computer?
+
+
+##### This Project is a javafx GUI Application Created by the Netbeans IDE v12.6 to successfully clone the source code and run the project inside your Development Environment you need to have javafx  enabled IDE. 
