@@ -27,9 +27,11 @@ Before proceeding to making installer for java programs the first thing we have 
 
 
 To get Started you can clone this repository and open our sample javafx project with your java IDE or you can directly proceed into making an executable program from a jar file by select your own java project.
+
+Setup and run Our Sample project: [Goto Our Sample Java Project](project/our-sample-program.md)
+
 Our Sample Project which is created using the Apache Netbeans IDE 12.6 is a simple javafx program that will store user profile data and displays each stored user profile data into the display list , it also includes features for adding new user profile and editing already available user profile data as well. the profile data is stored into the locally available mysql server, based on java database connectivity our app directly uses the local mysql server which will be later bundled together with our application. for storing user profile data and it consists of a database connector library jar for enabling the connection between the local database and our app.
 
-Our Sample project: [Goto Our Sample Java Project](project/our-sample-program.md)
 
 ##### The First Step is Getting The Jar Files from Java Source Code
 
@@ -150,8 +152,6 @@ To give you an idea of how this all works, start the Setup Compiler, click File 
 First Download Inno Setup Compiler Program
 Download link: [Inno Download Link](https://jrsoftware.org/isdl.php)
 
-Download and Install the Inno Setup Compiler Appllication 
-
 open up Inno Setup Compiler and click on the option "create a new script file using the script wizard" you see on the screen and it will directly open the GUI interface for you. but if you rather prefer writting all the code by yourself very good you can go ahead click start empty script and start typing the script by yourself but if you are not famillier with the Inno  Script and you mostly want easy ways the GUI Option is prolific. as simple as there is a form you have to fill and the app will generate the script file for you , fantastic and time saving.
 
 ![inno](https://user-images.githubusercontent.com/88676535/158459942-d5b65d66-565a-455a-832c-4f7ab58a5e5f.JPG) <br />
@@ -251,7 +251,7 @@ Since Most Part of MySQL is Developed using C also some part in C++ and for the 
 The Second Option looks Good and Reasonable. so what we did is we downloaded the program and included inside our setup file, goto the official website of microsoft and download the Microsoft Visual C++ Redistributable.
 ##### Download Microsoft Visual C++ Redistributable
 
-[Download](https://www.microsoft.com/en-in/download/details.aspx?id=48145)])
+[Download](https://www.microsoft.com/en-in/download/details.aspx?id=48145))
 
 after downloading the exe copy and paste it into the `bin` folder inside the `setup-installer-folder` then after coping the program successfully open the InnoScript file and goto the `[RUN]` Section of the script  add the following line of codes , what these codes down bellow will do is the code will run the exe file that we have previously added into our setup folder and it will automatically opens up the app and the dialog to start the installation of microsoft visual c++ distribution will be shown to the user.
 
@@ -265,7 +265,7 @@ Filename: {app}\bin\VC_redist.x64.exe; Parameters: "/q:a /c:""VCREDI~2.EXE /q:a 
 Note: we can add capability to check for the existence of Microsoft Visual C++ Redistribution by reading some Windows Registry Key values but in this project we haven't gone much deep this far.
 
 
-#### After You Have Finished doing all the above you can now compile the Inno Script. it may take some time but finally Inno Setup compiler will produce the setup exe and store the exe inside the  a folder named 'Output' you can get it inside  the  "setup-installer-folder"  or if you don't find it there it will be  Stored inside the Documents folder.
+#### After You Have Finished doing all the above steps you can now compile the Inno Script. it may take some time but finally Inno Setup compiler will produce the setup exe and store the exe inside the  a folder named 'Output' you can get it inside  the  "setup-installer-folder"  or if you don't find it there it will be  Stored inside the Documents folder.
 
 
 
