@@ -15,14 +15,10 @@ This is a Documentation to show how installer program is created for a java prog
 
 Tools and Programs We Used:
 
-* Mysql Server V5.6  
-     for our sample java project the Database to store each users profile data
-* Launch4j 
-     used to Create windows native Executable .exe from our sample java jar executable 
-* Inno Setup Compiler
-     to pack our application exe our icons configuration files as well as all the folders into a single setup program
-* Microsoft Visual C++ Distrbution X64 
-     mysql is depends on this program to work properly
+* MysSQL Server V5.6 ([Download MySQL](https://dev.mysql.com/downloads/mysql/5.6.html))
+* Launch4j ([Download Launch4j](http://launch4j.sourceforge.net/)) used to create the exe 
+* Inno Setup Compiler([Download Inno Setup Compiler](https://jrsoftware.org/isdl.php)) used to make the final setup program
+* Microsoft Visual C++ Distrbution X64()
   
  
 Before proceeding to making installer for java programs the first thing we have to do is creating windows native executable .exe from the java jar program, from so many available options out there we will use Launch4j.exe which is the best Windows native executable (.exe) java application wrapper available , which Offers native splash screen, application icon, search for JRE or use bundled one, feedback on startup failure, passes command line arguments... much more. after converting jar into executable .exe we will add java runtime , MySQL Database Server and Microsoft Visual C++ together with our executable program  and we will convert them into a single Setup.exe installer program by using a software that creates an installer. InnoSetup is an open source compiler to create installers on windows. 
@@ -62,50 +58,50 @@ After successfullly finishing the above now we will have our jar file and all th
  
 Let's set our Folder Structure suitable for creating the executable as well as well organized for making the setup later on.
 
-#### step 1. Create a new folder under your Desktop or other place and name it 'setup-installer-folder'
-#### step 2. Goto inside 'setup-installer-folder' and create another folder and name it 'bin'
-#### step 3. Then Copy the extracted jar file and the 'lib' folder into the newly created 'bin' folder
-#### step 4. Copy the 'config' and 'ethioClicksImages' folders and the 'icon.png' image from files folder of this repository into your 'setup-installer-folder' folder 
+#### step 1. Create a new folder under your Desktop or other place and name it `setup-installer-folder`
+#### step 2. Goto inside `setup-installer-folder` and create another folder and name it 'bin'
+#### step 3. Then Copy the extracted jar file and the `lib` folder into the newly created `bin` folder
+#### step 4. Copy the `config` and `ethioClicksImages` folders and the `icon.png` image from files folder of this repository into your `setup-installer-folder` folder 
 
 After successfully doing all the above steps you will have a folder structure like this as show on the picture below
 
 ![Edit Profile](images/setup-installer-strctr.JPG)
 
 #### Then next we will add our own java runtime environment.
-we can get the Java runtime from our already installed Java Runtime software Path or if we don't have Java Runtime already installed we need to download the java JRE runtime from the oracle official website. <br />
+we can get the Java runtime from our already installed Java Runtime software Path or if we don't have Java Runtime already installed we have to download the java JRE runtime from the oracle official website. <br />
 Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://www.java.com/en/download/)
 
-#### step 5. First create jre folder inside the 'setup-installer-folder/bin'  folder
+#### step 5. First create jre folder inside the `setup-installer-folder/bin`  folder
 
 ![Create JRE folder](images/bin-with-jre.JPG)
 
-#### step 6.  Goto inside the java runtime installation folder and copy the 'bin' and and 'lib' folders as shown in the picture below and paste them into the newly created jre folder inside the 'setup-installer-folder/bin/jre'. 
+#### step 6.  Goto inside the java runtime installation folder and copy the `bin` and and `lib` folders as shown in the picture below and paste them into the newly created jre folder inside the `setup-installer-folder/bin/jre`. 
 
 ![Create JRE folder](images/program-files-folder-jre.JPG)
 
 ### Next start Lanch4j app and directly start the process of converting jar into exe
 
-#### step 7. open  the launch4j application ( if you haven't yet downloaded the app the download link is available above ) since i'm using the Lanch4j v3.8 the first sreen you get will look like as follows if you are using the same version of launc4j launch4j v3.8 as me.
+#### step 7. open  the launch4j application ( if you haven't yet downloaded the app the download link is available above ) since i'm using the Lanch4j v3.8 the first sreen you will get will look like as follows if you are using the same version of launch4j(launch4j v3.8) like mine.
 
 ![Create JRE folder](images/launch4j/home.jpg)
 
 
-#### step 8.  Goto 'Basic' Tab and specify 3 things
+#### step 8.  Goto `Basic` Tab and specify 3 things
 
 ![basic tab](images/launch4j/basic-tab.jpg)
 
-* set the output File name and the directory you want it to be stored ( here the exe output should be inside setup-installer-folder as shown in the picture) (#1)
+* set the output File name and the directory you want it to be stored ( here the exe output should be inside `setup-installer-folder` as shown in the picture) (#1)
 * the jar executable file we had it inside the bin folder (#2)
 * and thirdly the icon you want to use for the exe program(it's optional).(#3)
 
-#### step 9. Goto 'ClassPath' Tab and do the followings based on the numbers you see on the screen
+#### step 9. Goto `ClassPath` Tab and do the followings based on the numbers you see on the screen
 
 ![Class path ](images/launch4j/classpath-tab.JPG)
 
- * first tick the 'Custom Classpath' after clicking the checkbox it will activate the view bellow the checkbox (#1)
- * then down below the checkbox on '*Main Class' column tap on the button indicated with the number 2  and select the jar file once again
+ * first tick the `Custom Classpath` after clicking the checkbox it will activate the view bellow the checkbox (#1)
+ * then down below the checkbox on `*Main Class` column tap on the button indicated with the number 2  and select the jar file once again
  * after selecting the jar file located inside the bin folder lanch4j app will populate and fill the input boxes automatically but on our scenario we have to edit and make them suitable for our specific project so let's click on the database connecter jar file you see and goto the Edit Item.
- * inside Edit item add 'bin/' before the path to database connecter library as shown in the picture and finally tap on accept button the next sreen you will see look as follows  <br /> 
+ * inside Edit item add `bin/` before the path to database connecter library as shown in the picture and finally tap on accept button the next sreen you will see look as follows  <br /> 
  ![class path success](images/launch4j/classpath-tab2.JPG)
 
 #### step 10. Done we have successfully configured the basic setting for the launch4j app to create our exe windows application
@@ -152,8 +148,7 @@ To give you an idea of how this all works, start the Setup Compiler, click File 
 ### Creating Script File is Straight forward and simple 
 
 First Download Inno Setup Compiler Program
-Download link:
-[Inno Download Link](https://jrsoftware.org/isdl.php)
+Download link: [Inno Download Link](https://jrsoftware.org/isdl.php)
 
 Download and Install the Inno Setup Compiler Appllication 
 
