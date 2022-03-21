@@ -7,7 +7,7 @@
 
 * Netbeans IDE( [Download Netbeans IDE]( https://netbeans.apache.org/download/nb13/nb13.html))
 * XAMP MySQL Server( [Download XAMP MySQL Server](https://www.apachefriends.org/download.html))
-* MySQL Workbench ( (Download MySQL Workbench)[https://dev.mysql.com/downloads/workbench/])
+* MySQL Workbench ( [Download MySQL Workbench](https://dev.mysql.com/downloads/workbench/))
 
 If You Haven't Yet Configured Your IDE to Support JavaFX then goto the Link down bellow and Follow the Provided Step by Step Instruction's 
 
@@ -24,7 +24,7 @@ After You Have the JavaFX successfully configured and working on your java IDE y
 
 ```
 
-#### In This Project there is a Database Library that enables this java program communicate with local MySQL server for Storage Data. since our java program uses the database connectivity you need to be famillier with the concept of JDBC and how java programs communicate with MySQL server's. you can get more information in this topic with the link provided bellow
+#### In This Project there is a Database Library that enables this java program communicate with local MySQL server for Data Storage. since our java program uses the database connectivity you need to be famillier with the concept of JDBC and how java programs communicate with MySQL server's. you can get more information in this topic with the link provided bellow
 [Java JDBC Tutorial](https://www.javatpoint.com/java-jdbc)
 
 ### What is JDBC and How to Connect Java with Database Server
@@ -69,8 +69,12 @@ Creating Table
 ```
 
 
-### step 4. open the `JavaDatabaseClass.java` and Edit the Credentials( the username as well as the password used to connect with your MySQL Server)
-### step 5: 
+#### step 4. open the `JavaDatabaseClass.java` and Edit the Credentials( the username as well as the password used to connect with your MySQL Server)
+#### step 5:  after you finish editing the credentials run the project.
+
+#### Successfully Running the project the Output of the sample program will look like as follows
+
+<br />
 #### The Main Screen
 ![User Profile](images/app-home.JPG)
 
