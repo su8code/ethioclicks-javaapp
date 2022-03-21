@@ -44,18 +44,24 @@
 #### How To Add This Project into My Development Environment?
 
 
-##### This Project is a javafx GUI Application Created by the Netbeans v12.6 IDE to clone the source code and  successfully run the project inside your Development Environment make sure you have javafx  enabled IDE. 
+##### This Project is a javafx GUI Application Created using the Netbeans v12.6 IDE to clone the source code and  successfully run the project inside your Development Environment make sure you have javafx  enabled IDE. 
 
 If You Haven't Yet Configured Your IDE to Support JavaFX then goto the Link down bellow and Following the Step by Step Instruction's  
 
 
-After You Have the JavaFX successfully configured and working on your java IDE you are good to go and run this application into your IDE. you can get the project source code inside this repository either clone this repository 
+After You Have the JavaFX successfully configured and working on your java IDE you are good to go and run this application into your IDE. then the first thing is getting the source code and you can get the project source code inside this repository either clone this repository or directly download the repository, the source code will be available in the project directory. 
 
 ```
+  
   git clone https://github.com/su8code/ethioclicks-javaapp.git
   cd ethioclicks-javaapp
   cd project
+   
+
 ```
+
+### What is JDBC and How to Connect Java with Database Server
+
 [Blog: Connect MySQL Database Server with Java Project in Netbeans IDE](https://www.tutorialsfield.com/how-to-connect-mysql-database-in-java-using-netbeans)
 
 
