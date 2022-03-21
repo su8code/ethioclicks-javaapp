@@ -1,7 +1,7 @@
 #### How To Add This Project into My Development Environment?
 
 
-##### This Project is a javafx GUI Application Created using the Netbeans v12.6 IDE to open and  successfully run the project inside your Development Environment make sure you have javafx  enabled IDE and You already have installed MySQL Program in Your Computer. 
+` This Project is a javafx GUI Application Created using the Netbeans v12.6 IDE to open and  successfully run the project inside your Development Environment make sure you have javafx  enabled IDE and You already have installed MySQL Program in Your Computer. `
 
 #### Before Starting to Use this sample project make sure you have the following applications Installed on Your Computer
 
@@ -24,7 +24,7 @@ After You Have the JavaFX successfully configured and working on your java IDE y
 
 ```
 
-#### In This Project there is a Database Library that enables this java program communicate with local MySQL server for Data Storage. since our java program uses the database connectivity you need to be famillier with the concept of JDBC and how java programs communicate with MySQL server's. you can get more information in this topic with the link provided bellow
+ In This Project there is a Database Library that enables this java program communicate with local MySQL server for Data Storage. since our java program uses the database connectivity you need to be famillier with the concept of JDBC and how java programs communicate with MySQL server's. you can get more information in this topic with the link provided bellow
 [Java JDBC Tutorial](https://www.javatpoint.com/java-jdbc)
 
 ### What is JDBC and How to Connect Java with Database Server
