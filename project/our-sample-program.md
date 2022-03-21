@@ -42,7 +42,7 @@ The Following blog will show you in Detail how you can enable JDBC support withi
 #### step 4: under your MySQL Workspace Create the Database named `ethioclicks_database` and inside that make a new table named `user_profile_data`
 
 
-since the program stores the user personnal informations inside the `ethioclicks_database` database we need to set up and create the database make a table  `user_profile_data` as follows.
+since the program stores the user personnal informations inside the `ethioclicks_database` database we need to set up and create the database as well as make a table  `user_profile_data` under the database as follows.
 
 The MySQL Workbench Software Will Help Us Run MySQL much easily and you can directly copy the codes here and paste it under your MySQL Workbench to make the database and the table.
 
@@ -75,6 +75,7 @@ Creating Table
 #### Successfully Running the project the Output of the sample program will look as follows
 
 <br />
+
 #### The Main Screen
 ![User Profile](images/app-home.JPG)
 
