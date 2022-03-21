@@ -6,14 +6,14 @@
 #### Before Starting to Use this sample project make sure you have the following applications Installed on Your Computer
 
 * Netbeans IDE( [Download Netbeans IDE]( https://netbeans.apache.org/download/nb13/nb13.html))
-* XAMP MySQL Server( [Download XAMP MySQL Server](https://www.apachefriends.org/download.html))
+* XAMP for MySQL Server( [Download XAMP](https://www.apachefriends.org/download.html))
 * MySQL Workbench ( [Download MySQL Workbench](https://dev.mysql.com/downloads/workbench/))
 
 If You Haven't Yet Configured Your IDE to Support JavaFX then goto the Link down bellow and Follow the Provided Step by Step Instruction's 
 
 [Set Up JavaFX on Netbeans IDE ](https://kensoftph.com/set-up-javafx-and-scene-builder-in-netbeans-ide/#:~:text=Open%20your%20NetBeans%20IDE%20and%20go%20to%20Tools,NetBeans%20IDE%20and%20click%20on%20apply%20and%20ok.)
 
-After You Have the JavaFX successfully configured and working on your java IDE you are good to go and run this application into your IDE. then the first thing is getting the source code and you can get the project source code inside this repository either clone this repository or directly download the repository, the source code will be available in the project directory. 
+After You Have the JavaFX successfully configured and working on your java IDE you are good to go and run this application into your IDE. first download the source code of sample project you can get the project source code inside this repository either clone this repository or directly download the repository, the source code will be available in the project directory. 
 
 ```
   
