@@ -15,7 +15,7 @@ This is a Documentation to show how installer program is created for a java prog
 
 Tools and Programs We Used:
 
-* MysSQL Server V5.6 ([Download MySQL](https://dev.mysql.com/downloads/mysql/5.6.html))
+* MySQL Server V5.6 ([Download MySQL](https://dev.mysql.com/downloads/mysql/5.6.html))
 * Launch4j ([Download Launch4j](http://launch4j.sourceforge.net/)) used to create the exe 
 * Inno Setup Compiler([Download Inno Setup Compiler](https://jrsoftware.org/isdl.php)) used to make the final setup program
 * Microsoft Visual C++ Redistributable X64([Download Visual C++ Redistributable](https://www.microsoft.com/en-in/download/details.aspx?id=48145)]))
@@ -215,6 +215,17 @@ Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""REVOKE ALL ON *.*
 Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""REVOKE ALL ON *.* FROM 'root'@'%';"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
 ;Filename: {app}\mysql\bin\mysql.exe; Parameters:"--p 3308 -u root   "; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
 ```
+
+##### Create the Database and the Table
+
+the following code will allow us to create the database `ethioclicks_database` and the table `user_profile_data` inside the MySQL Database Server , therefore we have to add the following lineof code into our `[RUN]` section. click the copy button on the top right corner of the code or directly copy the code and paste it into the inno script `[RUN]` Section.
+
+```
+Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""CREATE DATABASE ethioclicks_database;"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
+Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""CREATE TABLE `user_profile_data` (`id` int(11) NOT NULL AUTO_INCREMENT,`name` text,`email` text,  `phone` text,`gender` text, `profilePic` text, PRIMARY KEY (`id`)); "; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
+
+```
+
 
 ## Configure the app to responsibly Destroy and Remove the Database Instance automatically when the user Uninstall our program 
 
