@@ -221,8 +221,8 @@ Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""REVOKE ALL ON *.*
 Since Our sample java program uses the database `ethioclicks_database`  to store and manage the personal records of all the users added to the program our program needs the database to be present inside the MySQL server we have added together with our Setup so inorder to do that we have added the following line of code into our Inno Setup Script code . the following code will allow us to create the database `ethioclicks_database` and the table `user_profile_data` inside the MySQL Database Server , therefore we have to add the following lineof code into our `[RUN]` section. you can directlly click the copy button you see on the top right corner of the code down bellow or copy it yourself and paste it into the inno script `[RUN]` Section.
 
 ```
-Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""CREATE DATABASE ethioclicks_database;"; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
-Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""CREATE TABLE `user_profile_data` (`id` int(11) NOT NULL AUTO_INCREMENT,`name` text,`email` text,  `phone` text,`gender` text, `profilePic` text, PRIMARY KEY (`id`)); "; StatusMsg: Installation du service mysql;Description: Installation du service mysql; Flags: runhidden 
+Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""CREATE DATABASE ethioclicks_database;"; StatusMsg: Creating the ethioclicks_database Database;Description: Creating the ethioclicks_database Database mysql; Flags: runhidden 
+Filename: {app}\mysql\bin\mysql.exe; Parameters:"-u root  -e ""CREATE TABLE `user_profile_data` (`id` int(11) NOT NULL AUTO_INCREMENT,`name` text,`email` text,  `phone` text,`gender` text, `profilePic` text, PRIMARY KEY (`id`)); "; StatusMsg: Creating Table user_profile_data mysql;Description: Creating Table user_profile_data mysql; Flags: runhidden 
 
 ```
 
