@@ -90,7 +90,7 @@ Creating Table
 <br />
 
 #### The Main Screen
-![User Profile](images/app-home.JPG)
+![app-home](https://user-images.githubusercontent.com/88676535/159990819-1a895b2c-b462-40ab-b794-5352b620eb45.JPG)
 
 <br />
 <br />
@@ -98,36 +98,33 @@ Creating Table
 
 
 #### Show All User Profile Screen
-![Edit Profile](images/profiles-list.JPG)
+![profiles-list](https://user-images.githubusercontent.com/88676535/159990855-b533c0c1-cf62-4aad-addb-9f486fb2ba1e.JPG)
 
 <br />
 <br />
 
 #### Detailed Profile Info Screen
-![Profile Detail](images/profile-detail.JPG)
+![profile-detail](https://user-images.githubusercontent.com/88676535/159990889-5c7ceafa-28f9-49ab-8f4f-3696630bd91b.JPG)
 
 <br />
 <br />
 
 #### Add New Profile Screen
-![Add New](images/Add-New.JPG)
+![Add-New](https://user-images.githubusercontent.com/88676535/159990951-ce3d83df-ea28-4e6a-80e2-7b68b6af0776.JPG)
 
 <br />
 <br />
 
 
 #### The Edit User Profile Screen
-![Edit Profile](images/edit-profile.JPG)
+![edit-profile](https://user-images.githubusercontent.com/88676535/159990972-08de9cb9-9877-4193-80c0-954592cbb81f.JPG)
 
 <br />
 <br />
 
 
 #### The Screen to show Succesfully Updated User Profile
-![Updated Profile](images/edit-success.JPG)
+![edit-success](https://user-images.githubusercontent.com/88676535/159990999-8f382298-fb96-4c8b-9624-a24f7812007f.JPG)
 
 <br />
 <br />
-
-
-
