@@ -83,7 +83,7 @@ Creating Table
 
 #### step 5:  after editing the credentials make sure you have started your MySQL Server and `Run` the project.
 
-`Our Project is Tested and Works Well on softwares versions as provided above but if you are using other type of version's for those softwares you may experience some errors and the project may not run  and the code may not work for you. we kindly request you to use software version's as we have specified above`
+`Our Project is Tested and Works Well on softwares with version number as provided above, but if you use other version's of those  listed softwares above you may experience some errors and the project may not run  and the code may not work for you properly. we kindly request you to use software version's as we have specified above`
 
 #### Successfully Running the project the Output of the sample program will look as follows
 
