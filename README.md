@@ -45,7 +45,7 @@ After successully configuring and testing the project we have to get the jar bin
 Even if the steps for Extracting  the jar file vary from one IDE to other IDE , in all integrated development environments after successfully building and exporting the project our IDE will create the jar file inside our project folder including the libraries our project is configured to include(external libraries will be stored inside the lib folder along our .jar file).
 
 After Successfully making your jar file you will get an output like this
-![Edit Profile](images/jar.JPG)
+![jar](https://user-images.githubusercontent.com/88676535/159991165-e846a440-35d4-44e1-abee-d81a1a3a5eaa.JPG)
 
 Since our sample java project includes external database connector library our IDE have created a 'lib; folder along our jar file
 
@@ -67,7 +67,7 @@ Let's set our Folder Structure suitable for creating the executable as well as w
 
 After successfully doing all the above steps you will have a folder structure like this as show on the picture below
 
-![Edit Profile](images/setup-installer-strctr.JPG)
+![setup-installer-strctr](https://user-images.githubusercontent.com/88676535/159991241-dc317e68-d948-4edb-ae7f-b6103439cfd3.JPG)
 
 #### Then next we will add our own java runtime environment.
 we can get the Java runtime from our already installed Java Runtime software Path or if we don't have Java Runtime already installed we have to download the java JRE runtime from the oracle official website. <br />
@@ -75,11 +75,11 @@ Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://ww
 
 #### step 5. First create jre folder inside the `setup-installer-folder/bin`  folder
 
-![Create JRE folder](images/bin-with-jre.JPG)
+![bin-with-jre](https://user-images.githubusercontent.com/88676535/159991283-a246dfd3-2584-4d6c-8ccf-648269c9bc83.JPG)
 
 #### step 6.  Goto inside the java runtime installation folder and copy the `bin` and and `lib` folders as shown in the picture below and paste them into the newly created jre folder inside the `setup-installer-folder/bin/jre`. 
 
-![Create JRE folder](images/program-files-folder-jre.JPG)
+![program-files-folder-jre](https://user-images.githubusercontent.com/88676535/159991339-98a5d787-18e9-4545-981a-b4938e47e6f3.JPG)
 
 ### Next start Lanch4j app and directly start the process of converting jar into exe
 
