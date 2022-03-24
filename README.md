@@ -28,7 +28,7 @@ Before proceeding to making installer for java programs the first thing we have 
 
 To get Started you can clone this repository and open our sample javafx project with your java IDE or you can directly proceed into making an executable program from a jar file by select your own java project.
 
-Setup and run Our Sample project: [Goto Our Sample Java Project](project/our-sample-program.md)
+Setup and run Our Sample project: [Goto Our Sample Java Project](sample-project/our-sample-program.md)
 
 Our Sample Project which is created using the Apache Netbeans IDE 12.6 is a simple javafx program that will store user profile data and displays each stored user profile data into the display list , it also includes features for adding new user profile and editing already available user profile data as well. the profile data is stored into the locally available mysql server, based on java database connectivity our app directly uses the local mysql server which will be later bundled together with our application. for storing user profile data and it consists of a database connector library jar for enabling the connection between the local database and our app.
 
@@ -38,8 +38,8 @@ Our Sample Project which is created using the Apache Netbeans IDE 12.6 is a simp
 After successully configuring and testing the project we have to get the jar binary file from the finished final javafx project source code , if you know how to do it yourself it's great but if you don't know how to do it it's also awesome you are going to learn how to do it by yourself with this documentation, The steps used to export the java source code into a jar executable program varies from one IDE to other IDE's because of this we have provided a link down bellow to show you in detail and clear way to  get the jar executable file on mostly used java Integrated Development Environment's but if you are using another type of java IDE kindly search for how you can export the java source code into jar executable binary file for your specific IDE. 
 
 
-* [How to get .jar file on Eclipse](https://www.tutorialspoint.com/eclipse/eclipse_create_jar_files.htm)
-* [How to get .jar file in Netbeans](https://www.softwaretestinghelp.com/netbeans-ide-for-java/)
+* [How to get .jar file in Eclipse IDE](https://www.tutorialspoint.com/eclipse/eclipse_create_jar_files.htm)
+* [How to get .jar file in Netbeans IDE](https://www.softwaretestinghelp.com/netbeans-ide-for-java/)
 * [How to get .jar file in Intellij IDEA](https://blog.karthicr.com/posts/2016/07/10/creating-an-executable-jar-in-intellij-idea/)
 
 Even if the steps for Extracting  the jar file vary from one IDE to other IDE , in all integrated development environments after successfully building and exporting the project our IDE will create the jar file inside our project folder including the libraries our project is configured to include(external libraries will be stored inside the lib folder along our .jar file).
