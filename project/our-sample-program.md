@@ -5,9 +5,11 @@
 
 #### Before Starting to Use this sample project make sure you have the following applications Installed on Your Computer
 
-* Netbeans IDE( [Download Netbeans IDE]( https://netbeans.apache.org/download/nb13/nb13.html))
-* XAMP for MySQL Server( [Download XAMP](https://www.apachefriends.org/download.html))
+* Netbeans v12.6 IDE( [Download Netbeans IDE]( https://netbeans.apache.org/download/nb13/nb13.html))
+* MySQL Server v5.6 ( [Download MySQL Server](https://downloads.mysql.com/archives/installer/?version=5.6.26))
 * MySQL Workbench ( [Download MySQL Workbench](https://dev.mysql.com/downloads/workbench/))
+
+`note: Since This project is created by using java JDK 8 you may get a problem to run the project on another version of JDK therefore please install Java Development Kit 8 to run the sample project `
 
 If You Haven't Yet Configured Your IDE to Support JavaFX then goto the Link down bellow and Follow the Provided Step by Step Instruction's 
 
@@ -24,7 +26,11 @@ After You Have the JavaFX successfully configured and working on your java IDE y
 
 ```
 
- In This Project there is a Database Library that enables this java program communicate with local MySQL server for Data Storage. since our java program uses the database connectivity you need to be famillier with the concept of JDBC and how java programs communicate with MySQL server's. you can get more information in this topic with the link provided bellow
+ In This Project there is a Database Library that enables this java program communicate with local MySQL server for Data Storage. since our java program uses the database connectivity you need to be famillier with the concept of JDBC and how java programs communicate with MySQL server's. you can get more information in this topic with the link provided bellow.
+
+this project is created by using Java Database Connector Library Version 5.1.45
+`You can Get The Java Mysql Connector library we have used for this project inside the `project/jdbc-library` folder or you click here to download it: [Download Java Mysql Connector library]() `
+
 [Java JDBC Tutorial](https://www.javatpoint.com/java-jdbc)
 
 ### What is JDBC and How to Connect Java with Database Server
