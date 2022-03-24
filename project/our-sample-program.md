@@ -29,7 +29,7 @@ After You Have the JavaFX successfully configured and working on your java IDE y
 In This Project there is a Database Library that enables this java program communicate with local MySQL server for Data Storage. since our java program uses the database connectivity you need to be famillier with the concept of JDBC and how java programs communicate with MySQL server's. you can get more information in this topic with the link provided bellow.
 
 this project is created by using Java Database Connector Library Version 5.1.45 <br />
-`You can Get The Java Mysql Connector library we have used for this project inside the " project/jdbc-library " folder of our project directory or you directly click here to download it: [Download Java Mysql Connector library]() `
+`You can Get The Java Mysql Connector library we have used for this project inside the " project/jdbc-library " folder of our project directory `
 
 [Java JDBC Tutorial](https://www.javatpoint.com/java-jdbc)
 
@@ -83,7 +83,7 @@ Creating Table
 
 #### step 5:  after editing the credentials make sure you have started your MySQL Server and `Run` the project.
 
-`Our Project is Tested and Works Well if you are using a version of softwares we have listed above but if you are using other version's of softwares we have specified you may experience some errors and the code may not work for you. we kindly request you to use software version's that we have specified above`
+`Our Project is Tested and Works Well on softwares versions as provided above but if you are using other type of version's for those softwares you may experience some errors and the project may not run  and the code may not work for you. we kindly request you to use software version's as we have specified above`
 
 #### Successfully Running the project the Output of the sample program will look as follows
 
