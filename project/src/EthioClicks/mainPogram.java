@@ -156,10 +156,10 @@ public class mainPogram extends Application {
 
         primaryStage.setTitle(mainPogram.getInstance().sceneTitle);
         primaryStage.setScene(scene);
-        Image icon = new Image(new FileInputStream(mainPogram.getInstance().getPath()+File.separator+"icon.png"));
+      /*  Image icon = new Image(new FileInputStream(mainPogram.getInstance().getPath()+File.separator+"icon.png"));
         
        primaryStage.getIcons().add(icon);
-                
+       */         
         primaryStage.setOnCloseRequest( new EventHandler<WindowEvent>(){
            @Override
            public void handle(WindowEvent e){
