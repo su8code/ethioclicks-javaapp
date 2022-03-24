@@ -105,6 +105,9 @@ Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://ww
  * after selecting the jar file located inside the bin folder lanch4j app will populate and fill the input boxes automatically but on our scenario we have to edit and make them suitable for our specific project so let's click on the database connecter jar file you see and goto the Edit Item.
  * inside Edit item add `bin/` before the path to database connecter library as shown in the picture and finally tap on accept button the next sreen you will see look as follows  <br /> 
  ![class path success](images/launch4j/classpath-tab2.JPG)
+* in the `*Main Class` column specify the main Class as follows edit the value inside th input box with the class name `EthioClicks.mainPogram` 
+ 
+![fixJavaClass](https://user-images.githubusercontent.com/88676535/159977963-daee2452-c456-4753-bc52-19400a4a8857.JPG)
 
 #### step 10. Done we have successfully configured the basic setting for the launch4j app to create our exe windows application
 
