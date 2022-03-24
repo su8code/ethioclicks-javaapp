@@ -28,7 +28,9 @@ Before proceeding to making installer for java programs the first thing we have 
 
 To get Started you can clone this repository and open our sample javafx project with your java IDE or you can directly proceed into making an executable program from a jar file by select your own java project.
 
-Setup and run Our Sample project: [Goto Our Sample Java Project](sample-project/our-sample-program.md)
+![profile-detail](https://user-images.githubusercontent.com/88676535/159993868-180fc4eb-cab8-49b6-8641-ebd8527484be.JPG)
+
+[Click Here to get the Sample Java Project provided](sample-project/our-sample-program.md)
 
 Our Sample Project which is created using the Apache Netbeans IDE 12.6 is a simple javafx program that will store user profile data and displays each stored user profile data into the display list , it also includes features for adding new user profile and editing already available user profile data as well. the profile data is stored into the locally available mysql server, based on java database connectivity our app directly uses the local mysql server which will be later bundled together with our application. for storing user profile data and it consists of a database connector library jar for enabling the connection between the local database and our app.
 
@@ -85,12 +87,12 @@ Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://ww
 
 #### step 7. open  the launch4j application ( if you haven't yet downloaded the app the download link is available above ) since i'm using the Lanch4j v3.8 the first sreen you will get will look like as follows if you are using the same version of launch4j(launch4j v3.8) like mine.
 
-![Create JRE folder](images/launch4j/home.jpg)
+![home](https://user-images.githubusercontent.com/88676535/159993676-484be92b-96bf-4f14-968a-51b21ca215f7.jpg)
 
 
 #### step 8.  Goto `Basic` Tab and specify 3 things
 
-![basic tab](images/launch4j/basic-tab.jpg)
+![basic-tab](https://user-images.githubusercontent.com/88676535/159993639-0b6f7811-70da-4ad0-9247-87c80efbfb09.jpg)
 
 * set the output File name and the directory you want it to be stored ( here the exe output should be inside `setup-installer-folder` as shown in the picture) (#1)
 * the jar executable file we had it inside the bin folder (#2)
@@ -98,13 +100,15 @@ Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://ww
 
 #### step 9. Goto `ClassPath` Tab and do the followings based on the numbers you see on the screen
 
-![Class path ](images/launch4j/classpath-tab.JPG)
+![classpath-tab](https://user-images.githubusercontent.com/88676535/159993607-2afab09d-6366-4e94-a126-add87ed619f0.JPG)
 
  * first tick the `Custom Classpath` after clicking the checkbox it will activate the view bellow the checkbox (#1)
  * then down below the checkbox on `*Main Class` column tap on the button indicated with the number 2  and select the jar file once again
  * after selecting the jar file located inside the bin folder lanch4j app will populate and fill the input boxes automatically but on our scenario we have to edit and make them suitable for our specific project so let's click on the database connecter jar file you see and goto the Edit Item.
  * inside Edit item add `bin/` before the path to database connecter library as shown in the picture and finally tap on accept button the next sreen you will see look as follows  <br /> 
- ![class path success](images/launch4j/classpath-tab2.JPG)
+ 
+![classpath-tab2](https://user-images.githubusercontent.com/88676535/159993563-10763cc9-8193-4b2c-a0cd-d3299c51a95d.JPG)
+ 
 * in the `*Main Class` column specify the main Class as follows edit the value inside th input box with the class name `EthioClicks.mainPogram` 
  
 ![fixJavaClass](https://user-images.githubusercontent.com/88676535/159977963-daee2452-c456-4753-bc52-19400a4a8857.JPG)
@@ -112,10 +116,10 @@ Click Here to Donwload JRE [Oracle Download Java Runtime Environment](https://ww
 #### step 10. Done we have successfully configured the basic setting for the launch4j app to create our exe windows application
 
 but one more thing left, we want our executable program to use our own bundled java runtime. fortunately launch4j program allows us to specify which jre to use for our app during program execution. to apply these settings we have to set some values inside the jre tab goto 'jre' tab in launch4j app and type the path to our jre in the provided input box as shown in the picture bellow then finally start the process of creating exe by clicking the icon button you see pointed by the arrow labeled 2 <br />
-![Create JRE folder](images/launch4j/run.JPG)
+![run](https://user-images.githubusercontent.com/88676535/159993439-9c377d06-acf7-41e4-9eba-2e60d531885a.JPG)
 
 #### step 11. Finally launch4j will successfully build our exe file and store it on the output path with a name we have previously specified 
-![Create JRE folder](images/launch4j/successfull.JPG)
+![successfull](https://user-images.githubusercontent.com/88676535/159993475-fbdce0bb-8f4b-4d84-baf5-e1c29ceb5f8d.JPG)
 
 ## About Inno Setup Compiler 
 
