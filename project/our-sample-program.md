@@ -78,9 +78,12 @@ Creating Table
 #### step 4. open the `JavaDatabaseClass.java` and Edit the Credentials accordingly (set the username as well as the password used to connect with your MySQL Server)
 
 
+![db](https://user-images.githubusercontent.com/88676535/159984958-0a3bee37-fda7-48c0-bf08-6b23c1729e6a.JPG)
 
 
 #### step 5:  after editing the credentials make sure you have started your MySQL Server and `Run` the project.
+
+`Our Project is Tested and Works Well if you are using a version of softwares we have listed above but if you are using other version's of softwares we have specified you may experience some errors and the code may not work for you. we kindly request you to use software version's that we have specified above`
 
 #### Successfully Running the project the Output of the sample program will look as follows
 
